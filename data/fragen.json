@@ -1,0 +1,2568 @@
+{
+ "quelle": "KeyUser_Tool_S42023 - Interaktiv.xlsx",
+ "erstellt": "2026-11-24",
+ "fragen": [
+  {
+   "id": 1,
+   "nr": 1,
+   "frage": "Welche der folgenden Aussagen trifft auf eine Bestellung zu, die durch ein Freigabeverfahren gesperrt wurde und die noch nicht freigegeben wurde?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Eine Bestellung, die durch ein Freigabeverfahren gesperrt wurde, kann auf Positionsebene freigegeben oder abgelehnt werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Eine Nachricht zu einer Bestellung, die durch ein Freigabeverfahren gesperrt wurde, kann nicht ausgegeben werden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Eine Bestellung, die durch das Freigabeverfahren gesperrt wurde, durchläuft immer eine zweistufige Freigabe im SAP-System. Das heißt, sie muss von zwei berechtigten Personen in einer bestimmten Reihenfolge freigegeben werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Eine Bestellung, die durch ein Freigabeverfahren gesperrt wurde, ermöglicht Wareneingänge mit Bezug zu dieser Bestellung, ohne dass eine Freigabe erfolgt ist.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 2,
+   "nr": 2,
+   "frage": "Die Bestandsübersicht zeigt Ihnen die Menge des verfügbaren Materials an. Auf welcher Ebene werden Bestände aus Bestandsführungsperspektive auf Mengenebene verwaltet?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Auf Buchungskreisebene",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Auf Lagernummernebene",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Auf Lagerortebene",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Auf Lagerplatzebene",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 3,
+   "nr": 3,
+   "frage": "In welchen Belegen können Sie die Funktionen „Merken“ und „Vorerfassen“ nutzen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In Bestellungen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "In Kontrakten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "In Anfragen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In Bestellanforderungen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 4,
+   "nr": 4,
+   "frage": "Welche Ablauflogik wird im Rahmen der Bezugsquellenfindung verwendet, um eine potenzielle Bezugsquelle für ein angefordertes Material zuzuordnen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Rahmenverträge – Infosätze – Orderbuch – Quotierungen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Quotierungen – Orderbuch – Rahmenverträge – Infosätze",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Orderbuch – Quotierungen – Rahmenverträge – Infosätze",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Rahmenverträge – Infosätze – Quotierungen – Orderbuch",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 5,
+   "nr": 5,
+   "frage": "Welche Belege legt das System an, wenn Sie eine Rechnung in der Logistik-Rechnungsprüfung erfassen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Einen Obligobeleg (CO-Beleg)",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Einen Wareneingangsbeleg (MM-Beleg)",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Einen Rechnungsbeleg (MM-Beleg",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Einen Buchhaltungsbeleg (FI-Beleg)",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 6,
+   "nr": 6,
+   "frage": "Auf welcher der folgenden Ebenen melden Sie sich an einem SAP-System an?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Verschiedene Daten",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Auf der Ebene eines bestimmten Buchungskreises",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Auf der Ebene eines bestimmten Mandanten",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Auf der Ebene einer bestimmten Einkaufsorganisation",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 7,
+   "nr": 7,
+   "frage": "Daten eines Geschäftspartners, die für den Lieferanten relevant sind, werden in welche der folgenden Kategorien unterteilt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Rückmeldebeleg",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Geschäftsbereichsdaten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Einkaufsdaten",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Allgemeine Daten",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Buchhaltungsdaten",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 8,
+   "nr": 8,
+   "frage": "Worin unterscheiden sich die Einzelfreigabe und die Sammelfreigabe von Bestellanforderungen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Sammelfreigabe ist nur mit Freigabecodes möglich, die für diesen besonderen Zweck der Sammelfreigabe definiert werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Mit der Sammelfreigabe können Sie u.a. Positionen von mehreren Bestellanforderungen gleichzeitig freigegeben.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Einzelne Positionen in einer Bestellanforderung können unabhängig voneinander freigegeben und abgelehnt werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Sie können die Einzelfreigabe verwenden, um Positionen in verschiedenen Bestellanforderungen gleichzeitig freizugeben.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 9,
+   "nr": 9,
+   "frage": "Auf welche Weise können Feinabrufe und Lieferabrufe in Lieferplänen verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Mit Feinabrufen können Sie den Lieferanten beispielsweise auf den Tag genau über Ihre Bedarfe in der nahen Zukunft informieren.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "In der Lieferplaneinteilung müssen Sie die Kennzeichen „Lieferabruf“ und „Feinabruf“ verwenden, um zu definieren, ob Sie nur Lieferabrufe oder sowohl Liefer- als auch Feinabrufe nutzen möchten.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Abrufe können nur in der Transaktion „Abruf erstellen“ angelegt werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Mit Lieferabrufen können Sie Lieferanten eine mittelfristige Übersicht über Ihre Bedarfe bieten.",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Abrufe können nur für Lieferpläne mit Abrufdokumentation angelegt werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 10,
+   "nr": 10,
+   "frage": "Auf welche Art und Weise können Orderbuchsätze verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Im Orderbuch können maximal 20 Orderbuchsätze für ein Material eingegeben werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Um einen Lieferanten für ein Material mithilfe eines Orderbuchsatzes mit dem Sperrkennzeichen auszuschließen, müssen mindestens ein Infosatz für den Lieferanten und ein Materialstammsatz im System vorhanden sein.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Gültigkeitszeitraum gibt den Zeitraum an, in dem der Orderbuchsatz gültig ist.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Verwendung von Orderbuchsätzen kann für alle fremdbeschafften Materialien in einem Werk erzwungen werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 11,
+   "nr": 11,
+   "frage": "Sie bestellen ein Material zu einem bestimmten Preis. Sie finden das Feld für den unbewerteten Wareneingang auf der Registerkarte „Lieferung“ in den Positionsdetaildaten der Bestellung. Was passiert, wenn Sie dieses Kennzeichen setzen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Es können keine Wareneingänge mit Bezug auf die Bestellung gebucht werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Bestellposition wird bis zum Rechnungseingang nicht bewertet.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Der Preis und die Menge werden während eines Wareneingangs nicht aktualisiert.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Bestellposition wird nicht bewertet.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 12,
+   "nr": 12,
+   "frage": "Welche WE/RE-Steuerung ist bei Rechnungsplänen zulässig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Wareneingangskennzeichen: gesetzt; Kennzeichen „WE-unbewertet“: gesetzt; Rechnungskennzeichen: gesetzt.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Wareneingangskennzeichen: nicht gesetzt; Kennzeichen „WE-unbewertet“: nicht gesetzt; Rechnungskennzeichen: gesetzt.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Wareneingangskennzeichen: gesetzt; Kennzeichen „WE-unbewertet“: nicht gesetzt; Rechnungskennzeichen: gesetzt.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Wareneingangskennzeichen: gesetzt; Kennzeichen „WE-unbewertet“: gesetzt; Rechnungskennzeichen: nicht gesetzt.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 13,
+   "nr": 13,
+   "frage": "Beim Anlegen eines neuen Materialstammsatzes müssen Sie eine Materialart auswählen. Was wird durch die Materialart gesteuert?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Lagerort",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Art der Nummernvergabe",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Ebene für die Materialbewertung",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Sichten, die bei der Erfassung angezeigt werden",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Die erlaubte Beschaffungsart",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 14,
+   "nr": 14,
+   "frage": "Auf welche Weisen können Sie im SAP-System navigieren?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Favoriten",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Aufruf von Transaktionen innerhalb von Excel",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Eingeben von Transaktionscodes im Befehlsfeld",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Verwenden der Statusleiste",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 15,
+   "nr": 15,
+   "frage": "Die Organisationsstruktur Ihres Unternehmens verwendet zwei Buchungskreise und fünf Werke in einem Mandanten eines SAP-Systems. Sie möchten einen Materialstammsatz zur Verwendung im gesamten Unternehmen anlegen. Wie oft müssen Sie die Grunddaten für dieses Material anlegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Fünfmal, da diese Daten für jedes Werk angelegt werden müssen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Zehnmal, da diese Daten für jede Kombination aus Buchungskreis und Werk angelegt werden müssen",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Einmal, da diese Daten für jeden Mandanten angelegt werden",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Zweimal, da diese Daten für jeden Buchungskreis angelegt werden müssen",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 16,
+   "nr": 16,
+   "frage": "Welche Belege werden während eines bewerteten Wareneingangs erzeugt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Ein Buchhaltungsbeleg",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Ein Obligobeleg",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Ein Rechnungsbeleg",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Ein Materialbeleg",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 17,
+   "nr": 17,
+   "frage": "Was sind einige der Eigenschaften der Funktion „Merken“ in der Bestelltransaktion?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Funktion „Merken“ unterstützt Rahmenbestellungen.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Funktion „Merken“ deaktiviert die Folgeaktivitäten.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Funktion „Merken“ lässt alle Fehlertypen im Bestellbeleg zu.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Funktion „Merken“ kann nur beim Anlegen einer Bestellung mit einer speziellen Belegart verwendet werden.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 18,
+   "nr": 18,
+   "frage": "Wenn das System eine Bestellanforderung sperrt, wird die Registerkarte „Freigabestrategie“ angezeigt, die weitere Informationen zur Freigabe enthält. Welche Informationen werden auf dieser Registerkarte angezeigt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Freigabestrategie",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die für die Freigabe zuständige Person",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Die Freigabegruppe",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Das Freigabedatum",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Das Freigabekennzeichen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 19,
+   "nr": 19,
+   "frage": "Welche Informationen sind erforderlich, wenn Sie eine Limitbestellung anlegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Erwarteter Wert",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Limit",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Bestellmenge",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Nettopreis",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 20,
+   "nr": 20,
+   "frage": "Welcher der folgenden Prozesse kann direkt aus einer Bestellanforderung (BANF) angestoßen werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Rechnungsprüfungsprozess",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Erstellung eines Lieferscheins",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Die Erstellung einer Anfrage (RFQ)",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Buchung eines Wareneingangs",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 21,
+   "nr": 21,
+   "frage": "Für welche Ebenen sind die Einkaufsdaten im Materialstammsatz gültig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Alle Einkaufsdaten sind auf Mandantenebene gültig.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die meisten Einkaufsdaten sind auf Werksebene gültig.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Alle Einkaufsdaten sind auf Werksebene gültig.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 22,
+   "nr": 22,
+   "frage": "Sie verwenden das Freigabeverfahren für Bestellungen. Sie sind dafür zuständig, einige dieser Bestellungen freizugeben. Was benötigen Sie, um eine Bestellung freizugeben?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Berechtigung zum Freigeben von Bestellungen mit einem bestimmten Freigabekennzeichen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Berechtigung zum Freigeben von Bestellungen mit bestimmten Freigabegrenzen",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Die Berechtigung zum Freigeben von Bestellungen mit einem bestimmten Freigabecode",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Berechtigung zum Freigeben von Bestellungen mit einer bestimmten Freigabeklasse",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 23,
+   "nr": 23,
+   "frage": "Sie verwenden Kontrakte zur Optimierung Ihres Bestellungsprozesses. Warum kann es nützlich sein, Kontrakte zu verwenden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Verwendung von Kontrakten reduziert das Belegvolumen erheblich, da die einzelnen Abrufe keine eigenständigen Belege sind.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Einhaltung der Ziele (Wert oder Menge) kann einfacher überwacht werden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Liefertermine können vorzeitig geplant und als Vorschau an den Lieferanten gesendet werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Verwendung von Kontrakten beschleunigt den Prozess der Materialbedarfsplanung, da einzelne Abrufe direkt generiert werden können.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 24,
+   "nr": 24,
+   "frage": "In welchem der folgenden Fälle müssen Sie KEINEN Bewertungspreis eingeben, wenn Sie eine neue Bestellanforderung anlegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Wenn ein Infosatz mit gültigen Konditionen einer Bestellanforderungsposition zugeordnet wurde, müssen Sie keinen Bewertungspreis eingeben, weil dieser aus dem Infosatz gezogen wird.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Wenn das Material nicht bewertet ist oder keinen Stammsatz hat, muss der Ersteller den Bewertungspreis nie manuell eingeben.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Beim Anlegen einer neuen Bestellanforderungsposition müssen Sie den Bewertungspreis nie manuell eingeben.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Wenn Sie eine neue Bestellanforderungsposition für ein bewertetes Material anlegen, müssen Sie keinen Bewertungspreis eingeben, weil dieser aus dem Materialstammsatz gezogen wird.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 25,
+   "nr": 25,
+   "frage": "Zusätzlich zu den „normalen“ Beschaffungsprozessen wird auch eine Reihe spezieller Beschaffungsprozesse unterstützt. Welche speziellen Funktionen müssen berücksichtigt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Bei der Lohnbearbeitung wird der Positionstyp B in der Bestellung verwendet.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Bei der Lohnbearbeitung liefert der Lieferant ein bestelltes Endprodukt und der Auftraggeber muss alle Materialien bereitstellen, die für die Fertigung dieses Endprodukts erforderlich sind.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Eine Umlagerungsbestellung wird zur Beschaffung und Lieferung von Waren innerhalb eines Unternehmens verwendet.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Bei der Lieferantenkonsignation wird der Positionstyp L in der Konsignationsbestellung verwendet.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 26,
+   "nr": 26,
+   "frage": "Welche der folgenden Daten benötigen Sie immer, um einen Lieferplan für ein Material anzulegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Einen Zielwert",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Ein Beginndatum",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Ein Werk",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Ein Abruferstellungsprofil",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Eine Zielmenge",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 27,
+   "nr": 27,
+   "frage": "Auf welche Weise können Geschäftspartner von der Buchhaltung und vom Einkauf verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Geschäftspartnerdaten werden immer zentral angelegt. Daher müssen Sie beim Anlegen neuer Stammsätze nicht vorher prüfen, ob der Lieferant bereits im Stammdatenverzeichnis enthalten ist.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Wenn in der Buchhaltung neue Geschäftspartner angelegt wurden, können diese im Einkauf nicht aufgerufen werden. Neue Geschäftspartner müssen gemäß den separaten Einkaufsrichtlinien angelegt werden.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Wenn Sie Rechnungen und Gutschriften buchen, werden alle erforderlichen Daten automatisch an die Buchhaltung weitergeleitet.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Der Geschäftspartner enthält alle Informationen zum Lieferanten, die die Buchhaltung und der Einkauf für die Abwicklung aller relevanten Geschäftsvorfälle benötigen.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 28,
+   "nr": 28,
+   "frage": "Sie möchten sicherstellen, dass ein bestimmtes Material nur von Bezugsquellen beschafft wird, die im Orderbuch für dieses Material enthalten sind.\nWie gehen Sie vor?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie setzen das Kennzeichen „Automatische Bestellung“ im Materialstammsatz.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie setzen das Kennzeichen „Orderbuchpflicht“ im Lieferantenstammsatz.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Sie setzen das Kennzeichen „Orderbuchpflicht“ im Materialstammsatz.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Sie setzen das Kennzeichen „Orderbuchpflicht“ in den Einkaufsinfosätzen.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 29,
+   "nr": 29,
+   "frage": "Sie können die Belegübersicht in der Bestelltransaktion verwenden.\nWelche Belege können Sie durch einen Doppelklick auf die entsprechende Position anzeigen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Bestellanforderungen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Lieferpläne",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Angebote",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Bestellungen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 30,
+   "nr": 30,
+   "frage": "Was müssen Sie berücksichtigen, wenn Sie eine Bestellung für ein Material anlegen, um den Lagerbestand für dieses Material zu erhöhen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Position darf nicht kontiert sein.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Sie können wählen, ob der Lagerbestand durch den Wareneingang oder durch den Rechnungseingang aktualisiert werden soll.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Sie müssen einen Lagerort in der Bestellposition eingeben.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Sie müssen eine Materialnummer in der Bestellposition eingeben.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 31,
+   "nr": 31,
+   "frage": "Sie möchten mit der Verwendung von Rechnungsplänen beginnen, um Ihren Einkauf zu optimieren.\nWelche Arten von Rechnungsplänen stehen zur Verfügung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Finanzrechnungspläne",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Teilrechnungspläne",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Vollständige Rechnungspläne",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Periodische Rechnungspläne",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 32,
+   "nr": 32,
+   "frage": "Welche Infosatzarten stehen in einem SAP-System zur Verfügung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Infosätze für eine Warengruppe",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Infosätze für einen Lieferanten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Infosätze, die unabhängig vom Materialstamm sind",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Infosätze für ein Material",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 33,
+   "nr": 33,
+   "frage": "Sie können für Felder in einer Bestellung Vorschlagswerte zuordnen. Sie können beispielsweise Ihre Einkäufergruppe als Vorschlagswert für das Feld „Einkäufergruppe“ definieren. Somit müssen Sie dieses Feld nicht bei jeder Bestellung erneut ausfüllen.\nAn welcher Stelle der Bestelltransaktion können Sie diesen Vorschlagswert definieren?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In der Belegübersicht",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In Ihren persönlichen Einstellungen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In den Standardeinstellungen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In den individuellen Einstellungen",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 34,
+   "nr": 34,
+   "frage": "Welche der folgenden Aussagen zu Konditionen im Einkauf sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In Bestellanforderungen kann der Bruttopreis als Kondition eingegeben werden, ebenso wie Zuschläge und Rabatte. Frachtkosten und Skonti können nicht eingegeben werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Konditionen können nur auf der jeweiligen Positionsebene gepflegt werden. Konditionen im Belegkopf, die für alle Positionen gelten, sind nicht möglich.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Konditionen können u.a. in Angeboten, Infosätzen, Rahmenverträgen und Bestellungen gepflegt werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Wenn eine neue Bestellposition angelegt wird, werden Konditionen aus einem Rahmenvertrag nur bei einem Kontraktabruf vorgeschlagen.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 35,
+   "nr": 35,
+   "frage": "Das Orderbuch kann im Rahmen der Bezugsquellenfindung verwendet werden.\nWie können Orderbuchsätze angelegt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Orderbuchsätze können manuell mithilfe einer bestimmten Transaktion angelegt werden.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Orderbuchsätze können direkt aus einem Infosatz oder einem Rahmenvertrag heraus angelegt werden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Orderbuchsätze werden automatisch angelegt, wenn eine Quotierung für ein Material angelegt wird.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Orderbuchsätze können vom System automatisch für mehrere Materialien, jedoch nicht für mehrere Werke angelegt werden.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 36,
+   "nr": 36,
+   "frage": "Sie benötigen Büromaterial für Ihre Abteilung und legen hierfür eine Bestellanforderung an. Da das Büromaterial nicht bestandsmäßig geführt wird, müssen Sie Ihre Kostenstelle angeben. \nWas müssen Sie zuerst eingeben, um die Kontierungsdaten definieren zu können?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Das Kennzeichen „Keine Bestandsführung“",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Den Aktivitätstyp „Kostenstelle“",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Den Kontierungstyp „Kostenstelle“",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Den Positionstyp „Verbrauchsmaterial“",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 37,
+   "nr": 37,
+   "frage": "Bei jeder Bestellposition, die mit Bezug zu einer Kontraktposition angelegt wurde, wird die Abrufdokumentation für die Kontraktposition aktualisiert.\nWelche Informationen sind in der Abrufdokumentation verfügbar?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die bereits abgerufene Menge",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Der Name des jeweiligen Erstellers eines Abrufes",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Bestellwert",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Nummer der jeweiligen Bestellung",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Das Lieferdatum jedes Abrufs",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 38,
+   "nr": 38,
+   "frage": "Bei der Beschaffung bestimmter Materialien und Dienstleistungen ist das zu verwendende Kontierungsobjekt zum Zeitpunkt der Beschaffung unklar. Um zu vermeiden, dass Kontierungsdetails eingegeben werden müssen, müssen Sie den Kontierungstyp „U“ (Unbekannt) verwenden. In welchen Belegen ist der Kontierungstyp „U“ zulässig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Bei Bestellanforderungen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Bei Dienstleistungsbestellungen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In allen Bestellungen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Bei Konsignationsbestellungen",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Bei Limitbestellungen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 39,
+   "nr": 39,
+   "frage": "Sie fordern Auftragsbestätigungen für alle Bestellvorgänge von einem bestimmten Lieferanten an. Daher möchten Sie standardmäßig das Kennzeichen „Bestätigungspflicht“ setzen.\nWo im System nehmen Sie diese Einstellung vor?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In den Einkaufsdaten des Infosatzes",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In den Einkaufsdaten des Geschäftspartners",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In den Einkaufsdaten des Materialstammsatzes",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In den Grunddaten des Materialstammsatzes",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 40,
+   "nr": 40,
+   "frage": "Sie setzen beim Anlegen einer neuen Bestellposition das Kennzeichen „InfoUpdate“.\nWelche Auswirkungen hat dieses Kennzeichen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Wenn dieses Kennzeichen gesetzt ist, werden die Bestellnummer sowie die Position der Bestellung im Infosatz fortgeschrieben.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Wenn dieses Kennzeichen gesetzt ist und noch kein Infosatz vorhanden ist, wird dieser automatisch angelegt.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Wenn dieses Kennzeichen gesetzt ist und ein Infosatz bereits vorhanden ist, werden die dort bereits gepflegten Konditionen aktualisiert.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Dieses Kennzeichen steuert, welcher Preis bei der nächsten Bestellung vorgeschlagen wird.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 41,
+   "nr": 41,
+   "frage": "Was sind einige Merkmale einer Limitbestellung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Eine Limitbestellung hat einen Gültigkeitszeitraum.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Zu einer Limitbestellung kann kein Wareneingang erfasst werden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Bei einer Limitbestellung muss Positionstyp B verwendet werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Auf Kopfebene einer Limitbestellung wird ein Maximalwert erfasst. Rechnungen mit Bezug auf diese Bestellung können bis zu diesem Betrag erfasst werden.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 42,
+   "nr": 42,
+   "frage": "In der Bestelltransaktion können Sie in der Belegübersicht eine Bestellung mit Bezug schnell anlegen.\nWelche Methoden können Sie verwenden, um einen Beleg aus der Belegübersicht zu kopieren?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Markieren des Belegs und Auswahl von „Übernehmen“",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Einfacher Klick auf den Beleg",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Drag-and-Drop",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Doppelklick auf den Beleg",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 43,
+   "nr": 43,
+   "frage": "Welche Positionstypen sind sowohl in der Bestelltransaktion als auch in der Bestellanforderungstransaktion zulässig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Standard",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Konsignation",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Lohnbearbeitung",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Warengruppe",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Material unbekannt",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 44,
+   "nr": 44,
+   "frage": "Wie können Freigabeverfahren für Bestellanforderungen verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Genehmigungsprozess für Bestellanforderungen wird durch eine Freigabestrategie definiert. In dieser werden die zu verwendenden Freigabecodes sowie die Reihenfolge festgelegt, in der Genehmigungen erfolgen müssen.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Wie Bestellungen werden auch Bestellanforderungen auf Kopfebene gesperrt. Im Allgemeinen ist eine Freigabe nur auf Kopfebene möglich.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Ersteller der Bestellanforderung kann entscheiden, welche Freigabestrategie für die Bestellanforderung verwendet werden soll.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Das Freigabekennzeichen steuert, ob die Bestellanforderung in eine Anfrage, jedoch nicht in eine Bestellung umgewandelt werden kann.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 45,
+   "nr": 45,
+   "frage": "Auf welche Art können Einkaufsorganisationen definiert und verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Eine Einkaufsorganisation kann für mehrere Buchungskreise zuständig sein.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Ein Werk kann nur einer Einkaufsorganisation zugeordnet werden.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Die Einkaufsdaten im Materialstammsatz müssen für jede Einkaufsorganisation angelegt werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Bei der Pflege von Konditionen im Einkauf muss eine Einkaufsorganisation eingegeben werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 46,
+   "nr": 46,
+   "frage": "Welche der folgenden Eigenschaften gelten für die Sonderbestandsart „Lieferantenkonsignation“?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Bestand wird nicht nach Lieferant unterschieden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Der Bestand wird bewertet.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Bestand wird auf Lagerortebene verwaltet.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Der Bestand ist Eigentum des Lieferanten.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 47,
+   "nr": 47,
+   "frage": "Im Rahmen der Bezugsquellenfindung verwenden Sie Quotierungen, um Ihre Bedarfe gleichmäßig zu splitten. Innerhalb der Quotierung können Sie eine Quotenbasismenge festlegen.\nWelche der folgenden Aussagen zur Quotenbasismenge sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Eine Quotenbasismenge ist sinnvoll, wenn Sie eine neue Bezugsquelle zu einer bestehenden Quotierung hinzufügen.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die Definition einer Quotenbasismenge ist obligatorisch, wenn Sie eine neue Quotierung anlegen.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Für die Berechnung der Quotenbasismenge stehen verschiedene Verfahren zur Verfügung.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Eine Quotenbasismenge kann nur manuell erfasst werden.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 48,
+   "nr": 48,
+   "frage": "Sie verwenden Auftragsbestätigungen für bestimmte Bestellungen.\nWelche Voraussetzungen müssen erfüllt sein, damit Sie Auftragsbestätigungsmahnungen senden können?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Option zum Senden von Auftragsbestätigungsmahnungen muss im Materialstamm aktiviert sein.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Option zum Senden von Auftragsbestätigungsmahnungen muss im Lieferantenstamm aktiviert sein.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "In der Bestellung muss das Feld „Bestätigungspflicht“ markiert sein.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Der Beleg muss ausgegeben worden sein.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 49,
+   "nr": 49,
+   "frage": "In welcher Reihenfolge werden die Konditionen vom Infosatz festgelegt, wenn Sie eine Bestellung anlegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "1. Konditionen für die Einkaufsorganisation mit Werk\n2. Konditionen für die Einkaufsorganisation\n3. Konditionen aus dem letzten Beleg",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "1. Konditionen aus dem letzten Beleg\n2. Konditionen für die Einkaufsorganisation mit Werk\n3. Konditionen für die Einkaufsorganisation",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "1. Konditionen für die Einkaufsorganisation\n2. Konditionen aus dem letzten Beleg\n3. Konditionen für die Einkaufsorganisation mit Werk",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "1. Konditionen für die Einkaufsorganisation\n2. Konditionen für die Einkaufsorganisation mit Werk\n3. Konditionen aus dem letzten Beleg",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 50,
+   "nr": 50,
+   "frage": "Bei Konditionen kann generell zwischen zeitabhängigen und zeitunabhängigen Konditionen differenziert werden.\nIn welchen der folgenden Belege/Stammdaten können allgemein nur zeitabhängige Konditionen gepflegt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In Lieferplänen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In Infosätzen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In Bestellungen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In Kontrakten",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 51,
+   "nr": 51,
+   "frage": "Wann entsteht eine Konsignationsverbindlichkeit gegenüber dem Lieferanten einer Konsignationsbestellung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Nachdem der Wareneingang gebucht wurde",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sobald der Lieferant die Waren einplant",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Nachdem die Bestellung erfolgreich übermittelt wurde",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Nach der Entnahme aus den Lieferantenkonsignationslagern",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 52,
+   "nr": 52,
+   "frage": "Welche Einstellungen sind für eine werksbezogene Einkaufsorganisation erforderlich?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Einkäufergruppen müssen der Einkaufsorganisation zugeordnet sein.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die relevanten Einkäufergruppen müssen dem Werk zugeordnet sein.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Das relevante Werk muss der Einkaufsorganisation zugeordnet sein.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Einkaufsorganisation muss einem Buchungskreis zugeordnet sein.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 53,
+   "nr": 53,
+   "frage": "Ein Kontrakt mit einem Lieferanten wird als Rahmenvertrag verwendet, für den einzelne Abrufe während der Vertragslaufzeit angelegt werden.\nWelche Optionen stehen Ihnen beim Anlegen eines Kontraktabrufs zur Verfügung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Starten Sie die Transaktion „Bestellung anlegen“, und stellen Sie dann den Bezug zum Kontrakt her.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Starten Sie in der Transaktion „Kontraktabruf anlegen“, und stellen Sie dann den Bezug zum Kontrakt her.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Starten Sie die Transaktion „Automatische Bestellerzeugung aus Bestellanforderungen“, und treffen Sie dann die Auswahl entsprechend des Kontrakts.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Starten Sie die Transaktion „Kontrakt ändern“, und wählen Sie dann die Folgetunktion „Kontraktabruf“.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 54,
+   "nr": 54,
+   "frage": "Wie sind die Organisationsebenen innerhalb eines Unternehmens von oben nach unten strukturiert?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Mandant – Buchungskreis – Lagerort – Werk",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Mandant – Buchungskreis – Werk – Lagerort",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Mandant – Werk – Lagerort – Buchungskreis",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Buchungskreis – Mandant – Werk – Lagerort",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 55,
+   "nr": 55,
+   "frage": "Was sind einige Merkmale der Verwendung von Rechnungsplänen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Es handelt sich um eigenständige Belegtypen.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie können mit der SAP-Fiori-App „Bestellungen verwalten“ angelegt werden.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Sie können NICHT mit einer Bestellanforderung angefordert werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Rechnungen können basierend auf den Terminen in der Bestellposition automatisch angelegt werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 56,
+   "nr": 56,
+   "frage": "Auf welche Weise können Sie eine Bezugsquelle in einer Bestellanforderung ermitteln?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Über das Orderbuch",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Über das InfoUpdate-Kennzeichen",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Über eine Quotierung",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Über die Partnerrollen im Lieferantenstamm",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 57,
+   "nr": 57,
+   "frage": "Welche der folgenden Daten sind in einem Infosatz enthalten?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Aktuelle und künftige Konditionen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Buchungskreis",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Planlieferzeit",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Lagerort",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Einkaufsdaten (z. B. Toleranzen)",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 58,
+   "nr": 58,
+   "frage": "Wodurch wird ein bewerteter Wareneingang für eine Bestellposition mit Kontierung ausgelöst?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Durch das Kennzeichen „Wareneingang“",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Durch das Kennzeichen „Rechnungseingang“",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Durch das Kennzeichen „Wareneingang bewertet“",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Durch den Kontierungstyp",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 59,
+   "nr": 59,
+   "frage": "Welche Arten von Einkaufsorganisationen gibt es?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Lagerortübergreifende Einkaufsorganisation",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Werksbezogene Einkaufsorganisation",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Lagerortspezifische Einkaufsorganisation",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Buchungskreisübergreifende Einkaufsorganisation",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Buchungskreisspezifische Einkaufsorganisation",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 60,
+   "nr": 60,
+   "frage": "Sie haben für eine Bestellung bei einem Lieferanten einen einmaligen Rabatt ausgehandelt.\nWo müssen Sie diese Konditionen eingeben, damit der Rabatt auf alle Positionen angewendet wird?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In den Kopfkonditionen der Bestellung",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "In den Zahlungsbedingungen der Bestellung",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "In den allgemeinen Konditionen für den Lieferanten",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In den Positionskonditionen für die einzelnen Bestellpositionen",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 61,
+   "nr": 61,
+   "frage": "Was kann über eine Quotenbasismenge gesteuert werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Quotenbasismenge wirkt sich auf die Berechnung der Quote aus.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Mit der Quotenbasismenge kann die gleichmäßige Aufteilung der Bedarfsmenge über alle Bezugsquellen hinweg gesteuert werden, und zwar unabhängig von ihrer Quote.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Mit der Quotenbasismenge können Sie dafür sorgen, dass Bezugsquellen innerhalb der Quotierungen gesperrt werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Mit einer Quotenbasismenge können Sie sicherstellen, dass das System innerhalb der Quotierungen nicht sämtliche Bedarfe einer neuen Bezugsquelle zuordnet.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 62,
+   "nr": 62,
+   "frage": "Auf welcher der folgenden Ebenen ist eine Materialbewertung möglich?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Werk",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Geschäftsbereich",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Buchungskreis",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Lagerort",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 63,
+   "nr": 63,
+   "frage": "Sie bestellen ein Material zu einem bestimmten Preis. Sie finden das Feld für den unbewerteten Wareneingang auf der Registerkarte \"Lieferung\" in den Positionsdetaildaten der Bestellung.\nWas passiert, wenn Sie dieses Kennzeichen setzen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Bestellposition wird nicht bewertet.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Es können keine Wareneingänge mit Bezug auf die Bestellung gebucht werden.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Preis und die Menge werden während eines Wareneingangs nicht aktualisiert.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Bestellposition wird bis zum Rechnungseingang nicht bewertet.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 64,
+   "nr": 64,
+   "frage": "Sie haben sich entschieden, Lieferpläne zu verwenden, und sind dabei, einen Rahmenvertrag anzulegen.\nWas müssen Sie tun, um sicherzustellen, dass die Abrufdokumentation auch verfügbar ist?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie setzen im Lieferplan das Kennzeichen „mit Abrufdokumentation“.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie wählen die Belegart LPA.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Sie wählen die Belegart LP.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Sie setzen im Lieferplan und im Materialstammsatz das Kennzeichen „mit Abrufdokumentation“.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 65,
+   "nr": 65,
+   "frage": "Sie können Fixierungszeiträume verwenden, um den Verbindlichkeitsgrad von Einteilungen zu definieren. Folglich kann ein Einteilungsdatum in der nahen Zukunft einen höheren Verbindlichkeitsgrad haben als ein Einteilungsdatum in der fernen Zukunft.\nWelche der folgenden Aussagen zu Fixierungszeiträumen sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sowohl der erste als auch der zweite Fixierungszeitraum werden in den Einteilungen gedruckt.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Der erste Fixierungszeitraum gibt die Periode an, in der Einteilungen nicht fixiert sind und daher nicht als verbindliche Bestellung betrachtet werden können.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Einteilungen im ersten Fixierungszeitraum haben einen geringeren Verbindlichkeitsgrad als Einteilungen im zweiten Fixierungszeitraum.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Einteilungen im zweiten Fixierungszeitraum haben einen geringeren Verbindlichkeitsgrad als Einteilungen im ersten Fixierungszeitraum.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 66,
+   "nr": 66,
+   "frage": "Sie möchten innerhalb einer Quotierung die Information definieren, dass eine bestimmte Bezugsquelle maximal 1.000 Stück eines Materials pro Monat liefern darf.\nWie gehen Sie bei der Konfiguration vor?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie pflegen eine minimale Losgröße von 1.000 Stück.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie pflegen eine maximale Abrufmenge von 1.000 Stück pro Monat.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Sie pflegen eine Mindestmenge für die Splittung in Höhe von 1.000 Stück pro Monat.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Sie pflegen eine maximale Losgröße von 1.000 Stück.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 67,
+   "nr": 67,
+   "frage": "Auf welche Weise können Partnerrollen in Lieferantenstammsätzen verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie müssen eine spezielle Transaktion verwenden, um Partnerrollen in einem Lieferantenstammsatz einzugeben und zu ändern.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In einem beliebigen Lieferantenstammsatz kann nur eine einzige Partnerrolle gepflegt werden.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Eine Partnerrolle kann verwendet werden, um sicherzustellen, dass ein alternativer Rechnungssteller während der Rechnungserfassung automatisch vorgeschlagen wird.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Partnerrolle „Warenlieferant“ sollte in einem Lieferantenstammsatz gepflegt werden. Dies ist nur möglich, wenn ein Lieferantenstammsatz auch für den Warenlieferanten selbst angelegt wurde.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 68,
+   "nr": 68,
+   "frage": "Wie wird im Einkauf der Nettopreis berechnet?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Bruttopreis plus Bezugsnebenkosten minus Skonto",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Bruttopreis minus Rabatte plus Skonto",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Bruttopreis minus Rabatte plus Zuschläge ohne Berücksichtigung von Bezugsnebenkosten oder Skonti",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Bruttopreis plus Zuschläge plus Bezugsnebenkosten",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 69,
+   "nr": 69,
+   "frage": "Welche der folgenden Aussagen über Buchungskreis und Mandant sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Ein Mandant ist kaufmännisch, organisatorisch und technisch gesehen eine geschlossene Einheit.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Es besteht eine 1:1-Beziehung zwischen einem Mandanten und einem Buchungskreis.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Ein Buchungskreis ist für das externe Rechnungswesen eine geschlossene Einheit.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Ein Benutzer muss immer einem einzigen Buchungskreis zugeordnet werden.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 70,
+   "nr": 70,
+   "frage": "Welche Methoden können Sie bei der Logistik-Rechnungsprüfung anwenden, um einer Bestellung eine Bestellposition zuzuordnen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Über die Buchhaltungsbelegnummer des Wareneingangs",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Über die Bestellnummer",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Über die Materialbelegnummer des Wareneingangs",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Über die Lieferscheinnummer, sofern sie beim Wareneingang erfasst wurde",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Über die Frachtbriefnummer, sofern sie beim Wareneingang erfasst wurde",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 71,
+   "nr": 71,
+   "frage": "Was müssen Sie berücksichtigen, wenn Sie Kontierungstypen verwenden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Kontierungstyp muss auch bei der Bestellung von Lagermaterialien eingegeben werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Der Kontierungstyp „U = Unbekannt“ kann in Bestellanforderungspositionen mit dem Positionstyp „Standard“ verwendet werden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Der Kontierungstyp bestimmt, welches Kontierungsobjekt angegeben werden muss.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Es können nur die Kontierungstypen verwendet werden, die im jeweiligen System definiert sind. Es ist nicht möglich, Kontierungstypen zu ändern oder hinzuzufügen.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 72,
+   "nr": 72,
+   "frage": "Sie arbeiten in der Transaktion „Bestellanforderungen zuordnen und bearbeiten“. In dieser Transaktion können Sie den Bestellanforderungen zunächst eine Bezugsquelle zuordnen und dann die zugeordneten Bestellanforderungen umsetzen.\nIn welchen Beleg können die in dieser Transaktion zugeordneten Bestellanforderungen direkt umgesetzt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In Kontraktabrufe",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "In Bestellungen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In Angebote",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In Quotierungen",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "In Lieferplaneinteilungen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 73,
+   "nr": 73,
+   "frage": "In der Bestelltransaktion können Sie in der Belegübersicht eine Bestellung mit Bezug schnell anlegen. Welche Methoden können Sie verwenden, um einen Beleg aus der Belegübersicht zu kopieren?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Doppelklick auf den Beleg",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Drag-and-Drop",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Markieren des Belegs und Auswahl von „Übernehmen“",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Einfacher Klick auf den Beleg",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 74,
+   "nr": 74,
+   "frage": "Was müssen Sie berücksichtigen, wenn Sie eine Mehrfachkontierung innerhalb einer Bestellposition verwenden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Im Falle einer Mehrfachkontierung können die Kontierungsinformationen bei der Rechnungserfassung nicht mehr geändert werden",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Im Falle einer Mehrfachkontierung müssen Sie auch angeben, wie Teilrechnungsbeträge auf die einzelnen Kontierungsobjekte verteilt werden sollen.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Im Falle einer Mehrfachkontierung kann nur ein unbewerteter Wareneingang gebucht werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Verteilung auf die einzelnen Kontierungsobjekte kann mengenmäßig erfolgen.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 75,
+   "nr": 75,
+   "frage": "Bei jeder Bestellposition, die mit Bezug zu einer Kontraktposition angelegt wurde, wird die Abrufdokumentation für die Kontraktposition aktualisiert. Welche Informationen sind in der Abrufdokumentation verfügbar?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Name des jeweiligen Erstellers eines Abrufes",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Nummer der jeweiligen Bestellung",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Der Bestellwert",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Das Lieferdatum jedes Abrufs",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Die bereits abgerufene Menge",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 76,
+   "nr": 76,
+   "frage": "Sie haben für eine Bestellung bei einem Lieferanten einen einmaligen Rabatt ausgehandelt. Wo müssen Sie diese Konditionen eingeben, damit der Rabatt auf alle Positionen angewendet wird?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In den Zahlungsbedingungen der Bestellung",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In den allgemeinen Konditionen für den Lieferanten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "In den Positionskonditionen für die einzelnen Bestellpositionen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In den Kopfkonditionen der Bestellung",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 77,
+   "nr": 77,
+   "frage": "Sie fordern Auftragsbestätigungen für alle Bestellvorgänge von einem bestimmten Lieferanten an. Daher möchten Sie standardmäßig das Kennzeichen „Bestätigungspflicht“ setzen.\nWo im System nehmen Sie diese Einstellung vor?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In den Einkaufsdaten des Materialstammsatzes",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "In den Einkaufsdaten des Geschäftspartners",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "In den Grunddaten des Materialstammsatzes",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "In den Einkaufsdaten des Infosatzes",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 78,
+   "nr": 78,
+   "frage": "Sie möchten mit der Verwendung von Rechnungsplänen beginnen, um Ihren Einkauf zu optimieren. Welche Arten von Rechnungsplänen stehen zur Verfügung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Teilrechnungspläne",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Periodische Rechnungspläne",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Vollständige Rechnungspläne",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Finanzrechnungspläne",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 79,
+   "nr": 79,
+   "frage": "Sie haben eine Bestellung angelegt und möchten diese nun an den Lieferanten übermitteln. Welche der folgenden Medien können für die Nachrichtenausgabe verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Druckausgabe",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "EDI (Electronic Data Interchange)",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Nachrichtenausgabe erfolgt ausschließlich über die Transaktion ME21N.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "E-Mail",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Die Nachrichtenausgabe kann nur über das SAP Business Workplace erfolgen.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 80,
+   "nr": 80,
+   "frage": "Welche Einstellungen können in Bezug auf Organisationseinheiten wie Werke, Lagerorte und Buchungskreise vorgenommen werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Mehrere Werke können einem Buchungskreis zugeordnet werden.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "An Standorten ohne die Organisationseinheit „Werk“ sind Lagerorte einem Buchungskreis direkt zugeordnet.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Schlüssel eines Lagerortes muss nur innerhalb eines Werkes eindeutig sein.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Ein Werk kann mehreren Buchungskreisen zugeordnet werden.",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Mehrere Lagerorte können einem Werk zugeordnet werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 81,
+   "nr": 81,
+   "frage": "Das SAP Fiori Launchpad ermöglicht Benutzern das Personalisieren ihrer Apps. Welche der folgenden Einstellungen können Benutzer ändern?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Einstellungen für Sprache, Adresse und Telefonnummer des Benutzers",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Favoriten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Pflege von Standardwerten",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Auswahl der Design-Themes",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 82,
+   "nr": 82,
+   "frage": "Welche der folgenden Infotypen können Sie auswählen, wenn Sie einen neuen Infosatz anlegen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Lohnbearbeitung",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Konsignation",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Limit",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Streckenbestellung",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 83,
+   "nr": 83,
+   "frage": "Sie können die SAP-Fiori-App „Bestellungen verwalten“ zum Anlegen neuer Bestellungen verwenden.\nWelche Positionstypen können Sie beim Anlegen einer neuen Bestellposition verwenden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Warengruppe",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Material unbekannt",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Normal",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Streckenbestellung",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 84,
+   "nr": 84,
+   "frage": "Welche Kontraktarten stehen im SAP-System zur Verfügung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Mengenkontrakt",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Wertkontrakt",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Lieferkontrakt",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Werkskontrakt",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 85,
+   "nr": 85,
+   "frage": "Welche der folgenden Aussagen über Stammdaten für CpD-Lieferanten sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Im Unterschied zu anderen Stammsätzen können Sie einen CpD-Lieferantenstammsatz für mehrere unterschiedliche Lieferanten verwenden.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die Verwendung eines CpD-Lieferanten ist sinnvoll, wenn die bestellte Ware in Form einer einzigen Lieferung geliefert wird. Bei mehreren Teillieferungen ist die Verwendung eines CpD-Lieferanten nicht sinnvoll.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Ein CpD-Lieferantenstammsatz kann nur beim Anlegen der Bestellung verwendet werden. Der CpD-Lieferantenstammsatz reicht für die nachfolgende Rechnungsprüfung mit Bezug zu dieser Bestellung nicht aus.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Der Stammsatz für CpD-Lieferanten enthält keine lieferantenspezifischen Daten wie Adresse oder Bankverbindung.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 86,
+   "nr": 86,
+   "frage": "Sie möchten die Mehrfachkontierung bei einer Bestellung von Verbrauchsmaterialien verwenden. Wie können die Beträge auf die einzelnen Kontierungsobjekte verteilt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Prozentual",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Nach Basismengeneinheit",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "In der definierten Reihenfolge",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Betragsmäßig",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 87,
+   "nr": 87,
+   "frage": "Sie können im Einkauf Partnerrollen verwenden. Welche Voraussetzung muss erfüllt sein, damit Sie Partnerrollen verwendet werden können?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Abhängig von der Belegart des Einkaufsbelegs kann für den Partner ein Stammsatz erforderlich sein.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Für den beteiligten Partner muss ein entsprechender Stammsatz vorhanden sein.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Abhängig vom Positionstyp des Einkaufsbelegs kann für den Partner ein Stammsatz erforderlich sein.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 88,
+   "nr": 88,
+   "frage": "Beim Anlegen eines Materialstammsatzes müssen Sie Sichten auswählen. Welche der folgenden Aussagen zu Sichten sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Sichten im Materialstamm verringern die Komplexität der Informationen, die ein Datensatz enthält, da die Daten in logische Gruppen unterteilt sind.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Alle relevanten Sichten müssen beim ersten Anlegen des Datensatzes ausgewählt werden, da zu einem späteren Zeitpunkt keine weiteren Sichten hinzugefügt werden können.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der Pflegestatus gibt Auskunft darüber, welche Sichten gepflegt wurden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Zwischen der Materialart und den auswählbaren Sichten besteht keine Beziehung.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 89,
+   "nr": 89,
+   "frage": "Auf welche Art und Weise kann ein Orderbuch verwendet werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Das Orderbuch kann verwendet werden, um Bezugsquellen als fixiert zu kennzeichen.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Das Orderbuch wird pro Lieferant und Einkaufsorganisation gepfelgt.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Das Orderbuch kann zum Einschränken von Bezugsquellen verwendet werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Das Orderbuch wird pro Material und Werk gepflegt.",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Das Orderbuch kann verwendet werden, um einen Lieferanten vollständig für den Einkauf sperren.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  }
+ ]
+}

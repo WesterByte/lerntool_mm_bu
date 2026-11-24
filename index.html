@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Karteikarten-Lerntool</title>
+  <meta name="description" content="Karteikarten und Prüfungssimulation zum Lernen der Multiple-Choice-Fragen.">
+  <meta name="theme-color" content="#1f5fbf">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lerntool">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="brand" aria-label="Zur Startseite">
+      <img src="icons/icon.svg" alt="" width="28" height="28">
+      <span>Lerntool</span>
+    </a>
+    <div id="topbar-extra" class="topbar-extra"></div>
+  </header>
+  <main id="app" class="container" aria-live="polite">
+    <p class="muted">Lade Fragen …</p>
+  </main>
+  <div id="dialog" class="dialog-backdrop" hidden></div>
+  <noscript><p class="container">Bitte JavaScript aktivieren, um das Lerntool zu nutzen.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
