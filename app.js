@@ -4,6 +4,17 @@
   "use strict";
 
   // ---------- Konfiguration ----------
+  // Fragensets: jedes Set hat eigene Fragen, eigenen Speicher und eigene Prüfungsregeln.
+  // Der Speicher-Key des Original-Sets bleibt "lerntool.v1", damit bestehender Fortschritt erhalten bleibt.
+  var SETS = {
+    original: { name: "Original-Fragen", kurz: "Original", datei: "data/fragen.json", speicherKey: "lerntool.v1",
+      pruefungFragen: 60, pruefungMinuten: 90 },
+    ki: { name: "Übungsfragen (KI-generiert)", kurz: "KI-Übung", datei: "data/fragen_ki.json", speicherKey: "lerntool.ki.v1",
+      pruefungFragen: 50, pruefungMinuten: 75, // gleiches Tempo wie das Original: 1,5 Minuten pro Frage
+      hinweis: "Diese Fragen wurden von einer KI auf Basis der Lernzusammenfassungen S4500 und S4520 erstellt. Sie dienen zum Üben und sind keine offiziellen Prüfungsfragen." }
+  };
+  var SET_WAHL_KEY = "lerntool.set";
+  var SET_ID = "original";
   var PRUEFUNG_FRAGEN = 60;
   var PRUEFUNG_MINUTEN = 90;
   var GRENZE_BESTANDEN = 55;      // Prozent
@@ -11,7 +22,7 @@
   var GELERNT_AB_BOX = 3;         // so oft in Folge richtig = "gelernt"
   var MAX_BOX = 5;
   var WIEDERHOLEN_NACH = 3;       // falsche Karte kommt nach so vielen Karten erneut
-  var SPEICHER_KEY = "lerntool.v1";
+  var SPEICHER_KEY = SETS.original.speicherKey;
 
   // ---------- Hilfsfunktionen ----------
   var $app = document.getElementById("app");
@@ -64,7 +75,7 @@
   }
 
   // ---------- Speicher ----------
-  var speicher = laden();
+  var speicher = null;
   function laden() {
     var leer = { fortschritt: {}, einstellungen: { mischen: true }, pruefungen: [], laufend: null, ergebnis: null };
     try {
@@ -103,17 +114,45 @@
   var FRAGEN = [];          // [{key, nr, frage, antworten:[{id,text,richtig}], anzahlRichtig}]
   var NACH_KEY = {};
 
-  function datenLaden() {
-    return fetch("data/fragen.json", { cache: "no-cache" })
+  var GELADEN = {};          // setId -> {fragen, nachKey}
+
+  function datenLaden(setId) {
+    if (GELADEN[setId]) return Promise.resolve(GELADEN[setId]);
+    return fetch(SETS[setId].datei, { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
-        FRAGEN = d.fragen.map(function (f) {
+        var nachKey = {};
+        var fragen = d.fragen.map(function (f) {
           var key = hash(f.frage + "|" + f.antworten.map(function (a) { return a.text; }).join("|"));
-          var q = { key: key, nr: f.nr, frage: f.frage, antworten: f.antworten, anzahlRichtig: f.anzahlRichtig };
-          NACH_KEY[key] = q;
+          var q = { key: key, nr: f.nr, frage: f.frage, antworten: f.antworten, anzahlRichtig: f.anzahlRichtig, quelle: f.quelle || "" };
+          nachKey[key] = q;
           return q;
         });
+        return (GELADEN[setId] = { fragen: fragen, nachKey: nachKey });
       });
+  }
+
+  // Fragenset laden und aktiv schalten (Fragen, Speicher, Prüfungsregeln)
+  function setAktivieren(setId) {
+    if (!SETS[setId]) setId = "original";
+    return datenLaden(setId).then(function (g) {
+      var s = SETS[setId];
+      SET_ID = setId;
+      SPEICHER_KEY = s.speicherKey;
+      PRUEFUNG_FRAGEN = s.pruefungFragen;
+      PRUEFUNG_MINUTEN = s.pruefungMinuten;
+      FRAGEN = g.fragen;
+      NACH_KEY = g.nachKey;
+      speicher = laden();
+      lern = null;
+      seiteErgebnis.filter = null;
+      seiteFragen.filter = null;
+      seitePruefung.uebersicht = false;
+      try { localStorage.setItem(SET_WAHL_KEY, setId); } catch (e) { /* ignorieren */ }
+    });
+  }
+  function gespeichertesSet() {
+    try { return localStorage.getItem(SET_WAHL_KEY) || "original"; } catch (e) { return "original"; }
   }
   function richtigeIds(q) {
     return q.antworten.filter(function (a) { return a.richtig; }).map(function (a) { return a.id; });
@@ -146,6 +185,7 @@
     if (aufraeumen) { aufraeumen(); aufraeumen = null; }
     $extra.innerHTML = "";
     $dialog.hidden = true;
+    if (!speicher) return; // Fragen werden noch geladen
     if (pruefungAblaufPruefen()) { if (location.hash === "#/ergebnis") seiteErgebnis(); return; }
     var h = location.hash.replace(/^#\/?/, "");
     var teile = h.split("?");
@@ -177,7 +217,12 @@
     var laufend = speicher.laufend;
     var letzte = speicher.pruefungen.slice(-5).reverse();
 
-    var html = "";
+    var html = '<div class="card set-wahl"><div class="tabs" role="group" aria-label="Fragenset wählen">' +
+      Object.keys(SETS).map(function (id) {
+        return '<button data-set="' + id + '" aria-pressed="' + (id === SET_ID) + '">' + esc(SETS[id].name) + "</button>";
+      }).join("") + "</div>" +
+      (SETS[SET_ID].hinweis ? '<p class="small muted" style="margin:10px 0 0">' + esc(SETS[SET_ID].hinweis) + "</p>" : "") +
+      '<p class="small muted" style="margin:6px 0 0">Lernstand und Prüfungen werden für jedes Fragenset getrennt gespeichert.</p></div>';
     if (laufend) {
       html += '<div class="card" style="border-color:var(--primary)"><h2>Laufende Prüfung</h2>' +
         '<p>Restzeit: <b>' + zeitFormat(laufend.ende - Date.now()) + "</b> · " +
@@ -185,7 +230,7 @@
         '<a class="btn primary" href="#/pruefung">Prüfung fortsetzen</a></div>';
     }
 
-    html += '<div class="card"><h1>Dein Lernstand</h1>' +
+    html += '<div class="card"><h1>Dein Lernstand · ' + esc(SETS[SET_ID].kurz) + "</h1>" +
       '<div class="stats">' +
       '<div class="stat"><b>' + FRAGEN.length + "</b><span>Fragen</span></div>" +
       '<div class="stat"><b style="color:var(--ok)">' + z.gelernt + "</b><span>gelernt</span></div>" +
@@ -203,7 +248,8 @@
       '<option value="neu">Nur neue (' + z.neu + ")</option>" +
       '<option value="alle">Alle Karten (' + FRAGEN.length + ")</option></select>" +
       '<button class="btn primary" id="start-lernen">Lernen starten</button></div>' +
-      '<div class="card"><h2>Prüfungssimulation</h2><p class="muted">' + Math.min(PRUEFUNG_FRAGEN, FRAGEN.length) + " zufällige Fragen, " + PRUEFUNG_MINUTEN +
+      '<div class="card"><h2>Prüfungssimulation</h2><p class="muted">' +
+      (PRUEFUNG_FRAGEN >= FRAGEN.length ? "Alle " + FRAGEN.length + " Fragen in zufälliger Reihenfolge, " : PRUEFUNG_FRAGEN + " zufällige Fragen, ") + PRUEFUNG_MINUTEN +
       " Minuten. Nur vollständig richtige Antworten zählen. Bestanden ab " + GRENZE_BESTANDEN + " %, mit Auszeichnung ab " + GRENZE_AUSZEICHNUNG + " %.</p>" +
       '<button class="btn primary" id="start-pruefung">' + (laufend ? "Neue Prüfung starten" : "Prüfung starten") + "</button></div></div>";
 
@@ -224,6 +270,13 @@
       '<p class="small muted">Dein Fortschritt wird nur in diesem Browser auf diesem Gerät gespeichert.</p>';
 
     $app.innerHTML = html;
+
+    $app.querySelector(".set-wahl .tabs").onclick = function (e) {
+      var b = e.target.closest("[data-set]");
+      if (!b || b.getAttribute("data-set") === SET_ID) return;
+      $app.innerHTML = '<p class="muted">Lade Fragen …</p>';
+      setAktivieren(b.getAttribute("data-set")).then(route, ladeFehler);
+    };
 
     var sel = document.getElementById("filter");
     if (z.neu + z.lernend === 0) sel.value = "alle";
@@ -324,7 +377,8 @@
     $extra.innerHTML = '<span class="small muted">' + offen + " offen</span>";
 
     var html = '<div class="card">' +
-      '<div class="q-meta"><span>Frage ' + q.nr + "</span>" + stChip + hinweisChip(q) + "</div>" +
+      '<div class="q-meta"><span>Frage ' + q.nr + "</span>" + stChip + hinweisChip(q) +
+      (q.quelle ? '<span class="small">' + esc(q.quelle) + "</span>" : "") + "</div>" +
       '<div class="q-text">' + esc(q.frage) + "</div>" +
       antwortenHtml(q, karte.ordnung, karte.gewaehlt, karte.geprueft ? "aufloesung" : "auswahl");
     if (karte.geprueft) {
@@ -574,7 +628,7 @@
     var filter = seiteFragen.filter || "alle";
     var liste = FRAGEN.filter(function (q) { return filter === "alle" || status(q.key) === filter; });
     var z = zaehlen(FRAGEN.map(function (q) { return q.key; }));
-    var html = '<div class="card"><h1>Alle Fragen</h1>' +
+    var html = '<div class="card"><h1>Alle Fragen · ' + esc(SETS[SET_ID].kurz) + "</h1>" +
       '<div class="tabs">' + [["alle", "Alle", FRAGEN.length], ["neu", "Neu", z.neu], ["lernend", "In Arbeit", z.lernend], ["gelernt", "Gelernt", z.gelernt]].map(function (t) {
         return '<button data-f="' + t[0] + '" aria-pressed="' + (filter === t[0]) + '">' + t[1] + " (" + t[2] + ")</button>";
       }).join("") + "</div>" +
@@ -597,7 +651,7 @@
     var dl = document.getElementById("diese-lernen");
     if (dl) dl.onclick = function () { lernSitzungStarten(liste.map(function (q) { return q.key; })); location.hash = "#/lernen"; };
     document.getElementById("reset").onclick = function () {
-      bestaetigen("Fortschritt zurücksetzen?", "Alle Lernstände und Prüfungsergebnisse auf diesem Gerät werden gelöscht.", "Zurücksetzen")
+      bestaetigen("Fortschritt zurücksetzen?", "Alle Lernstände und Prüfungsergebnisse für „" + esc(SETS[SET_ID].name) + "“ auf diesem Gerät werden gelöscht. Das andere Fragenset bleibt unverändert.", "Zurücksetzen")
         .then(function (ok) {
           if (!ok) return;
           speicher.fortschritt = {}; speicher.pruefungen = []; speicher.ergebnis = null; speicher.laufend = null;
@@ -610,14 +664,20 @@
   window.addEventListener("hashchange", route);
   // Prüfung auch dann automatisch abgeben, wenn man gerade auf einer anderen Seite ist
   setInterval(function () {
-    if (speicher.laufend && location.hash !== "#/pruefung" && Date.now() >= speicher.laufend.ende) pruefungAbgeben(true);
+    if (speicher && speicher.laufend && location.hash !== "#/pruefung" && Date.now() >= speicher.laufend.ende) pruefungAbgeben(true);
   }, 5000);
   window.addEventListener("storage", function (e) { if (e.key === SPEICHER_KEY) speicher = laden(); });
 
-  datenLaden().then(route).catch(function (err) {
+  function ladeFehler(err) {
     $app.innerHTML = '<div class="card"><h1>Fragen konnten nicht geladen werden</h1><p class="muted">' + esc(err.message || err) +
-      '</p><p>Hinweis: Die App muss über einen Webserver (z. B. GitHub Pages) geöffnet werden, nicht als lokale Datei.</p></div>';
-  });
+      '</p><p>Hinweis: Die App muss über einen Webserver (z. B. GitHub Pages) geöffnet werden, nicht als lokale Datei.</p>' +
+      (SET_ID !== "original" || gespeichertesSet() !== "original" ? '<p><button class="btn" id="zum-original">Zu den Original-Fragen</button></p>' : "") + "</div>";
+    var b = document.getElementById("zum-original");
+    if (b) b.onclick = function () { setAktivieren("original").then(function () { location.hash = "#/"; route(); }, ladeFehler); };
+  }
+  setAktivieren(gespeichertesSet())
+    .catch(function () { return setAktivieren("original"); })
+    .then(route).catch(ladeFehler);
 
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     navigator.serviceWorker.register("sw.js").catch(function () {});
