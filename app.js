@@ -680,6 +680,16 @@
     .then(route).catch(ladeFehler);
 
   if ("serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(function () {});
+    // Wenn ein neuer Service Worker eine ältere Version ablöst, Seite einmal neu laden,
+    // damit sofort die neue App angezeigt wird (nicht beim allerersten Besuch).
+    var hatteController = !!navigator.serviceWorker.controller, neuGeladen = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hatteController || neuGeladen) return;
+      neuGeladen = true;
+      location.reload();
+    });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" })
+      .then(function (reg) { reg.update().catch(function () {}); })
+      .catch(function () {});
   }
 })();
