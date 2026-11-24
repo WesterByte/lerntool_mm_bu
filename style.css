@@ -217,3 +217,7 @@ select { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid
   position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
   background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 10px; z-index: 60; font-weight: 600;
 }
+
+/* Auswahl des Fragensets auf der Startseite */
+.set-wahl .tabs { margin-bottom: 0; }
+.set-wahl .tabs button { flex: 1 1 auto; }

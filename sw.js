@@ -1,8 +1,8 @@
 /* Service Worker: App offline verfügbar machen.
    App-Dateien: zuerst Cache, im Hintergrund aktualisieren.
    Fragen (data/fragen.json): zuerst Netzwerk, damit Updates sofort ankommen. */
-var CACHE = "lerntool-v1";
-var DATEIEN = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "data/fragen.json",
+var CACHE = "lerntool-v2";
+var DATEIEN = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "data/fragen.json", "data/fragen_ki.json",
   "icons/icon.svg", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", function (e) {

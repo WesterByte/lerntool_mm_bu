@@ -12,6 +12,11 @@ wird nur lokal im Browser des jeweiligen Geräts gespeichert.
 - **Prüfungssimulation:** 60 zufällige Fragen, 90-Minuten-Timer, automatische Abgabe
   bei Ablauf. Keine Teilpunkte: eine Frage zählt nur, wenn alle Antworten exakt stimmen.
   Bestanden ab 55 %, mit Auszeichnung ab 75 %. Auswertung mit Fehlern und richtigen Lösungen.
+- **Zwei Fragensets**, auf der Startseite umschaltbar:
+  - *Original-Fragen* (`data/fragen.json`, 89 Fragen aus der Excel): Prüfung mit 60 Fragen in 90 Minuten.
+  - *Übungsfragen (KI-generiert)* (`data/fragen_ki.json`, 50 Fragen aus den Lernzusammenfassungen
+    S4500/S4520, Kapitel 1–8): Prüfung mit allen 50 Fragen in 75 Minuten (gleiches Tempo, 1,5 Min./Frage).
+  Lernstand und Prüfungen werden je Set getrennt gespeichert (`lerntool.v1` bzw. `lerntool.ki.v1`).
 - Hinweis „X richtige Antworten“ bei Fragen mit mehreren richtigen Antworten.
 - Als App installierbar („Zum Home-Bildschirm“) und offline nutzbar.
 
@@ -48,6 +53,11 @@ Das Skript meldet Auffälligkeiten (z. B. Fragen ohne Nummer oder ohne richtige 
 Danach `data/fragen.json` committen. Der Lernfortschritt bleibt erhalten, solange der
 Fragetext gleich bleibt. Wenn `app.js` oder `style.css` geändert werden, in `sw.js` die
 Versionsnummer bei `CACHE` erhöhen, damit installierte Apps die neue Version laden.
+
+## KI-Übungsfragen bearbeiten
+
+Die Übungsfragen stehen lesbar in `tools/ki_fragen_quelle.py` (richtige Antworten mit „X“).
+Nach einer Änderung `python tools/ki_fragen_quelle.py` ausführen und `data/fragen_ki.json` committen.
 
 ## Lokal ausprobieren
 

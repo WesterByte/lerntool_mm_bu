@@ -1,0 +1,1546 @@
+{
+ "quelle": "KI-generiert aus den Lernzusammenfassungen S4500 und S4520 (Kapitel 1–8)",
+ "erstellt": "2026-11-24",
+ "fragen": [
+  {
+   "id": 1,
+   "nr": 1,
+   "quelle": "S4500 · Kapitel 1",
+   "frage": "Welche der folgenden Prinzipien gehören zu den Designprinzipien von SAP Fiori?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Transaktionsorientiert",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Einheitlich",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Programmierbar",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Rollenbasiert",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Einfach",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 2,
+   "nr": 2,
+   "quelle": "S4500 · Kapitel 1",
+   "frage": "Sie möchten prüfen, welche Benutzer gerade mit aktiven Sitzungen im SAP-System angemeldet sind. Welche Transaktion verwenden Sie?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "SE16",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME23N",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "SU01",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "SM04",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 3,
+   "nr": 3,
+   "quelle": "S4500 · Kapitel 1",
+   "frage": "Welche Personalisierungsmöglichkeiten bietet Ihnen das SAP GUI?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie können die Transaktionscodes von Standardtransaktionen umbenennen.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie können Ihre Favoritenliste verwalten.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Sie können Kachelgruppen anlegen und Themes für Ihre Kacheln auswählen.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Sie können sich im SAP Easy Access Menü die technischen Namen der Transaktionen anzeigen lassen.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 4,
+   "nr": 4,
+   "quelle": "S4500 · Kapitel 2",
+   "frage": "In welcher Reihenfolge laufen die Schritte des Beschaffungszyklus ab?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Bedarfsermittlung – Bestellungsbearbeitung – Ermittlung der Bezugsquelle – Bestellüberwachung – Rechnungsprüfung – Wareneingang – Zahlungsabwicklung",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Bedarfsermittlung – Ermittlung der Bezugsquelle – Bestellungsbearbeitung – Bestellüberwachung – Wareneingang – Rechnungsprüfung – Zahlungsabwicklung",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Bedarfsermittlung – Ermittlung der Bezugsquelle – Bestellungsbearbeitung – Wareneingang – Zahlungsabwicklung – Rechnungsprüfung – Bestellüberwachung",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Ermittlung der Bezugsquelle – Bedarfsermittlung – Bestellungsbearbeitung – Wareneingang – Bestellüberwachung – Rechnungsprüfung – Zahlungsabwicklung",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 5,
+   "nr": 5,
+   "quelle": "S4500 · Kapitel 2",
+   "frage": "Welche der folgenden Aussagen zur Einkäufergruppe sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Eine Einkäufergruppe repräsentiert einzelne Einkäufer oder Teams, die für bestimmte Materialien oder Lieferanten zuständig sind.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die Einkäufergruppe ist nicht an andere Organisationseinheiten gebunden.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Einkäufergruppe ist eine rechtlich eigenständige, bilanzierende Einheit.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Jede Einkäufergruppe ist genau einem Werk fest zugeordnet.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 6,
+   "nr": 6,
+   "quelle": "S4500 · Kapitel 2",
+   "frage": "Bei welchem Sonderbeschaffungsprozess erhält ein externer Dienstleister beigestellte Komponenten, um damit ein Produkt zu fertigen oder zu veredeln?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Limitbestellung",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Umlagerung mit Umlagerungsbestellung",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Lieferantenkonsignation",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Lohnbearbeitung",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 7,
+   "nr": 7,
+   "quelle": "S4500 · Kapitel 3",
+   "frage": "Welche Transaktionen verwenden Sie im einfachen Beschaffungsprozess für die drei Schritte Bestellung anlegen, Wareneingang buchen und Rechnung erfassen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME11",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME21N",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "MM01",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "MIGO",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "MIRO",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 8,
+   "nr": 8,
+   "quelle": "S4500 · Kapitel 3",
+   "frage": "Bei der Rechnungserfassung stellt das System Mengen- und Preisabweichungen fest, die die Toleranzgrenzen überschreiten. Wie reagiert das System?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Das System warnt den Benutzer und kann die Rechnung bei Bedarf automatisch zur Zahlung sperren.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Das System bucht den zugehörigen Wareneingang automatisch zurück.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Das System sendet die Bestellung automatisch erneut an den Lieferanten.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Das System storniert die Rechnung automatisch.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 9,
+   "nr": 9,
+   "quelle": "S4500 · Kapitel 3",
+   "frage": "Mit welchen Transaktionen können Sie eine bereits angelegte Bestellung ändern bzw. anzeigen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME22N",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "ME23N",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "ME21N",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "MIGO",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 10,
+   "nr": 10,
+   "quelle": "S4500 · Kapitel 4",
+   "frage": "Welche Aussagen zu den Methoden der Materialbewertung sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der gleitende Durchschnittspreis (V) bleibt konstant, bis er manuell geändert wird.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Der Standardpreis (S) wird mit jeder Wareneingangsbuchung neu berechnet.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der gleitende Durchschnittspreis (V) passt sich mit jeder Wareneingangsbuchung an.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Beim Standardpreis (S) bleibt der Preis konstant.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 11,
+   "nr": 11,
+   "quelle": "S4500 · Kapitel 4",
+   "frage": "Welche der folgenden Zuordnungen von Transaktion und Funktion sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME11 – Einkaufsinfosatz anlegen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "BP – Geschäftspartner pflegen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "MM01 – Materialstammsatz anlegen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "MIGO – Rechnung erfassen",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "MIRO – Wareneingang buchen",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 12,
+   "nr": 12,
+   "quelle": "S4500 · Kapitel 4",
+   "frage": "Wodurch werden in SAP S/4HANA die bisher separaten Stammsätze für Lieferanten und Kunden ersetzt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Durch den Geschäftspartner",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Durch den Materialstammsatz",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Durch den Einkaufsinfosatz",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Durch das Orderbuch",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 13,
+   "nr": 13,
+   "quelle": "S4500 · Kapitel 5",
+   "frage": "Welche Aussagen zur Beschaffung von Verbrauchsmaterial sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In der Bestellanforderung für Verbrauchsmaterial kann die Kontierung entfallen.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Verbrauchsmaterial wird direkt auf ein Verbrauchskonto bzw. eine Kostenstelle oder ein anderes Kontierungsobjekt gebucht.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Verbrauchsmaterial kann auch ohne Materialstammsatz beschafft werden.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Verbrauchsmaterial erhöht nach dem Wareneingang den Lagerbestand.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 14,
+   "nr": 14,
+   "quelle": "S4500 · Kapitel 5",
+   "frage": "Wann erfolgt bei einem unbewerteten Wareneingang die wertmäßige Buchung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Direkt mit dem Wareneingang auf ein Bestandskonto",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Erst mit der Zahlung an den Lieferanten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Bereits beim Anlegen der Bestellung",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Erst mit der Rechnungserfassung",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 15,
+   "nr": 15,
+   "quelle": "S4500 · Kapitel 5",
+   "frage": "Aus welchen Quellen kann die Preisfindung beim Anlegen einer Bestellung erfolgen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Aus dem Lagerort",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Aus der Materialart",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Aus Einkaufsinfosätzen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Aus Rahmenverträgen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 16,
+   "nr": 16,
+   "quelle": "S4500 · Kapitel 6",
+   "frage": "Welche Funktionen bietet die SAP-Fiori-App „Meine Bestellanforderungen – Neu“?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Neue Bestellanforderungen für Materialien oder Dienstleistungen anlegen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Lieferantenrechnungen buchen",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Bearbeitungsstatus und Folgebelege einer Anforderung anzeigen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Freigabestrategien im Customizing konfigurieren",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Rücklieferungen bei fehlerhaften oder beschädigten Waren durchführen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 17,
+   "nr": 17,
+   "quelle": "S4500 · Kapitel 6",
+   "frage": "Auf welche Weise können Sie in der Self-Service-Beschaffung eine neue Bestellanforderungsposition erfassen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Durch Auswahl eines Materials aus einem Katalog",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Als Freitextposition für Materialien oder Dienstleistungen ohne Stammsatz",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Durch direkte Eingabe einer Materialnummer",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Durch Hochladen einer Lieferantenrechnung",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Durch Übernahme aus der Lieferantenbewertung",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 18,
+   "nr": 18,
+   "quelle": "S4500 · Kapitel 6",
+   "frage": "Wer bestätigt im Self-Service-Beschaffungsprozess den Wareneingang, und mit welcher App?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Der Rechnungsprüfer mit der Transaktion MIRO",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Der Lieferant mit der App „Lieferantenrechnung anlegen“",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Der anfordernde Mitarbeiter mit der App „Wareneingang bestätigen – Neu“",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Der Einkäufer mit der Transaktion ME21N",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 19,
+   "nr": 19,
+   "quelle": "S4500 · Kapitel 6",
+   "frage": "Welche Möglichkeiten haben Sie in der App „Wareneingang bestätigen – Neu“?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Den Wareneingang für eine Teillieferung bestätigen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die Bestellung an einen anderen Lieferanten umleiten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Das Endlieferungskennzeichen setzen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Der Bestellanforderung eine Bezugsquelle zuordnen",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Den Wareneingang für eine vollständige Lieferung bestätigen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 20,
+   "nr": 20,
+   "quelle": "S4500 · Kapitel 7",
+   "frage": "Für welche Werke ist ein Zentralkontrakt gültig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Nur für das Werk, in dem der Kontrakt angelegt wurde, und dessen Lagerorte",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Für alle Werke der Einkaufsorganisation",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Nur für Werke, die einem anderen Buchungskreis zugeordnet sind",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Nur für genau ein Werk",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 21,
+   "nr": 21,
+   "quelle": "S4500 · Kapitel 7",
+   "frage": "In welche Bestandsarten können Sie einen Wareneingang mit der Transaktion MIGO buchen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Frei verwendbarer Bestand",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Kontraktbestand",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Gesperrter Bestand",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Bestellbestand",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Qualitätsprüfbestand",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 22,
+   "nr": 22,
+   "quelle": "S4500 · Kapitel 7",
+   "frage": "Welche Belege können Sie mit der Transaktion MIRO erfassen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Nachträgliche Belastungen",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Wareneingänge",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Rechnungen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Bestellanforderungen",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Gutschriften",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 23,
+   "nr": 23,
+   "quelle": "S4500 · Kapitel 7",
+   "frage": "Mit welcher Transaktion legen Sie einen Einkaufskontrakt an?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME59N",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME31L",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "ME31K",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "ME51N",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 24,
+   "nr": 24,
+   "quelle": "S4500 · Kapitel 8",
+   "frage": "Welche Voraussetzungen müssen für die automatische Erzeugung von Bestellungen aus Bestellanforderungen erfüllt sein?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Das Material wird in den Qualitätsprüfbestand gebucht.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Es gibt eine gültige Bezugsquelle, z. B. einen Einkaufsinfosatz, Kontrakt oder Lieferplan.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Im Materialstammsatz ist das Kennzeichen für automatische Bestellung gesetzt.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Im Lieferantenstammsatz ist das Kennzeichen für automatische Bestellung gesetzt.",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "In der Bestellposition ist die Wareneingangsabrechnung aktiviert.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 25,
+   "nr": 25,
+   "quelle": "S4500 · Kapitel 8",
+   "frage": "Welche Voraussetzungen gelten für die automatische Wareneingangsabrechnung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In der Bestellposition ist die Wareneingangsabrechnung aktiviert.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Im Materialstammsatz ist das Kennzeichen für automatische Bestellung gesetzt.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Im Lieferantenstammsatz ist das Kennzeichen für automatische Abrechnung gesetzt.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Bestellung muss über ein Freigabeverfahren genehmigt worden sein.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 26,
+   "nr": 26,
+   "quelle": "S4500 · Kapitel 8",
+   "frage": "Welche Aussagen zur Materialbedarfsplanung (MRP) sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "MRP erzeugt ausschließlich Bestellungen, niemals Bestellanforderungen.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "MRP Live ist für SAP HANA optimiert und verarbeitet große Datenmengen effizient.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Bei fremdbeschafften Materialien muss die Bezugsquelle immer nach dem MRP-Lauf manuell zugeordnet werden.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die klassische MRP ist flexibel, aber langsamer als MRP Live.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 27,
+   "nr": 27,
+   "quelle": "S4520 · Kapitel 1",
+   "frage": "Welche der folgenden Kürzel bezeichnen spezielle Materialarten?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "OMEB",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "NLAG",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "UNBW",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "SERV",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "MEKE",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 28,
+   "nr": 28,
+   "quelle": "S4520 · Kapitel 1",
+   "frage": "Welche der folgenden Partnerrollen werden typischerweise im Lieferantenstammsatz gepflegt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Einkäufergruppe",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Kostenstelle",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Rechnungssteller",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Warenlieferant",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Bestelladresse",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 29,
+   "nr": 29,
+   "quelle": "S4520 · Kapitel 1",
+   "frage": "Was bestimmt der Pflegestatus eines Materialstammsatzes?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Welcher Einkaufsorganisation das Material zugeordnet ist",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Ob das Material mit Standardpreis oder gleitendem Durchschnittspreis bewertet wird",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Welcher Nummernkreis für das Material verwendet wird",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Ob der Materialstammsatz für bestimmte Prozesse, z. B. das Anlegen von Bestellungen, genutzt werden kann",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 30,
+   "nr": 30,
+   "quelle": "S4520 · Kapitel 2",
+   "frage": "Was ist im Kalkulationsschema des Einkaufs hinterlegt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Freigabestrategie für Bestellungen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Die Regeln für die Preisfindung, z. B. für Bruttopreis, Nettopreis und Effektivpreis",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Orderbuchsätze für ein Material",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Die Nummernkreise für Einkaufsbelege",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 31,
+   "nr": 31,
+   "quelle": "S4520 · Kapitel 2",
+   "frage": "Welche Aussagen zu Lieferplänen mit und ohne Abrufdokumentation sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Lieferpläne sind kurzfristige Einmalvereinbarungen ohne festgelegte Mengen und Termine.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Bei Lieferplänen mit Abrufdokumentation werden keine Einteilungen an den Lieferanten übermittelt.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Bei Lieferplänen mit Abrufdokumentation dokumentiert das System jede übermittelte Einteilung und speichert die Abrufdetails.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Bei Lieferplänen ohne Abrufdokumentation werden die Lieferplaneinteilungen direkt an den Lieferanten übertragen.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 32,
+   "nr": 32,
+   "quelle": "S4520 · Kapitel 2",
+   "frage": "Welche Transaktionen verwenden Sie für die Arbeit mit Lieferplänen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME33L",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "ME31K",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "MEKP",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "ME32L",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "ME31L",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 33,
+   "nr": 33,
+   "quelle": "S4520 · Kapitel 3",
+   "frage": "Wo können Bezugsquellen gesperrt werden?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "In der Materialart",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Zentral im Lieferantenstammsatz",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Im Kalkulationsschema",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Im Orderbuch",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 34,
+   "nr": 34,
+   "quelle": "S4520 · Kapitel 3",
+   "frage": "Welche der folgenden Zuordnungen von Transaktion und Funktion in der Bezugsquellenfindung sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME06 – Orderbuch analysieren",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "ME01 – Orderbuch pflegen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "ME56 – Lieferanten sperren",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "MEQ1 – Quotierung pflegen",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "MK05 – Bestellanforderungen bearbeiten",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 35,
+   "nr": 35,
+   "quelle": "S4520 · Kapitel 3",
+   "frage": "Wofür werden Kataloge im Rahmen der Bezugsquellenfindung eingesetzt?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie ersetzen Einkaufsinfosätze bei der Preisfindung.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie verteilen Bedarfe nach Quoten auf mehrere Bezugsquellen.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Sie ermöglichen Self-Service-Bestellungen direkt aus einer vordefinierten Auswahl.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Sie sperren Lieferanten zentral für alle Werke.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 36,
+   "nr": 36,
+   "quelle": "S4520 · Kapitel 4",
+   "frage": "Welche der folgenden Zuordnungen von Transaktion und Funktion in der Einkaufsabwicklung sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME56 – Automatische Bestellerzeugung",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME2A – Bestellüberwachung",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "ME59N – Bezugsquelle zuordnen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "ME58 – Bestellung über Zuordnungsliste anlegen",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "ME91F – Bestellungen mahnen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 37,
+   "nr": 37,
+   "quelle": "S4520 · Kapitel 4",
+   "frage": "Welche Aufgabe hat die Situationsverarbeitung im Einkauf?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Sie gibt Bestellungen automatisch frei.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Sie ersetzt die Materialbedarfsplanung.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Sie berechnet die Gesamtbewertung von Lieferanten.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Sie erkennt kritische Geschäftsereignisse automatisch.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 38,
+   "nr": 38,
+   "quelle": "S4520 · Kapitel 4",
+   "frage": "Mit welchen SAP-Fiori-Apps unterstützen Sie die Überwachung von Bestellungen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Lieferantenbewertung nach Fragebogen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Lieferantenbestätigungen überwachen",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Mahnerinnerung für Bestellung – Erweitert",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Material anlegen",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 39,
+   "nr": 39,
+   "quelle": "S4520 · Kapitel 5",
+   "frage": "Welche Freigabearten gibt es bei Bestellanforderungen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Positionsfreigabe: Jede Position wird einzeln geprüft.",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Lieferantenfreigabe: Der Lieferant genehmigt die Bestellanforderung.",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Werksfreigabe: Das anfordernde Werk genehmigt die Bestellanforderung selbst.",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Gesamtfreigabe: Die gesamte Bestellanforderung muss genehmigt werden.",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 40,
+   "nr": 40,
+   "quelle": "S4520 · Kapitel 5",
+   "frage": "Welche der folgenden Zuordnungen von Transaktion und Freigabefunktion sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME35K – Kontrakt freigeben",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "ME28 – Bestellungen gesammelt freigeben",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "ME55 – Einzelfreigabe von Bestellanforderungen",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "ME29N – Bestellung freigeben",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "ME54N – Lieferplan freigeben",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 41,
+   "nr": 41,
+   "quelle": "S4520 · Kapitel 5",
+   "frage": "Welche Aussagen zu flexiblen Workflows im Einkauf sind richtig?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Flexible Workflows können nur in der Transaktion ME54N bearbeitet werden.",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Flexible Workflows können klassische Freigabeverfahren ersetzen.",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Die Genehmigung kann über die SAP Fiori Inbox erfolgen.",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Flexible Workflows sind nur für Kontrakte verfügbar.",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 42,
+   "nr": 42,
+   "quelle": "S4520 · Kapitel 6",
+   "frage": "Ein IT-Projekt soll in mehreren Teilschritten abgerechnet werden, unabhängig vom Wareneingang. Was verwenden Sie?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Einen Lieferplan mit Abrufdokumentation",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Einen periodischen Rechnungsplan",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Eine Lieferantenkonsignation",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Einen Teilrechnungsplan",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 43,
+   "nr": 43,
+   "quelle": "S4520 · Kapitel 6",
+   "frage": "Mit welchen Transaktionen arbeiten Sie bei Rechnungsplänen?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME2ON – Rechnungspläne anlegen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME2DP – Rechnungspläne sperren",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "MLRP – Rechnungsplan-Termine aktualisieren",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "MRIS – Rechnungspläne abrechnen",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 2
+  },
+  {
+   "id": 44,
+   "nr": 44,
+   "quelle": "S4520 · Kapitel 6",
+   "frage": "Sie möchten den Lohnbearbeitungsbestand prüfen. Welche Transaktion bzw. SAP-Fiori-App verwenden Sie?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "ME2DP bzw. die App „Bestellanzahlungen überwachen“",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "ME2ON bzw. die App „Lohnbearbeitungs-Cockpit“",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "MRIS bzw. die App „Rechnungsplanabrechnung anlegen“",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "ME2A bzw. die App „Lieferantenbestätigungen überwachen“",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 45,
+   "nr": 45,
+   "quelle": "S4520 · Kapitel 7",
+   "frage": "Welche Einstellungen nehmen Sie bei Belegarten im Einkauf vor?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Das Positionsnummernintervall",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Die Partnerrollen des Lieferanten",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Die Nummernkreisintervalle für interne und externe Nummernvergabe",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Die Freigabestrategie",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Den Feldauswahlschlüssel",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 46,
+   "nr": 46,
+   "quelle": "S4520 · Kapitel 7",
+   "frage": "Welche Eigenschaften kann ein Feld in einem Einkaufsbeleg über die Feldauswahl erhalten?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Nur Anzeige",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Pflichtfeld",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Nur für den Lieferanten sichtbar",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Verschlüsselt",
+     "richtig": false
+    },
+    {
+     "id": "E",
+     "text": "Ausgeblendet",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 47,
+   "nr": 47,
+   "quelle": "S4520 · Kapitel 7",
+   "frage": "Mit welchem Benutzerparameter legen Sie Funktionsberechtigungen für Einkäufer fest, z. B. eine Einschränkung der Preisänderung?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "OMSR",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "EVO",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "EFB",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "OMT4",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 48,
+   "nr": 48,
+   "quelle": "S4520 · Kapitel 8",
+   "frage": "Welche Hard Facts fließen in die Gesamtbewertung eines Lieferanten ein?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Fragebogen",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Zeit",
+     "richtig": true
+    },
+    {
+     "id": "C",
+     "text": "Preis",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Menge",
+     "richtig": true
+    },
+    {
+     "id": "E",
+     "text": "Anzahl der Mitarbeiter des Lieferanten",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 3
+  },
+  {
+   "id": 49,
+   "nr": 49,
+   "quelle": "S4520 · Kapitel 8",
+   "frage": "Was misst die Lieferantenbewertung nach Zeit?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Die Dauer der Rechnungsprüfung",
+     "richtig": false
+    },
+    {
+     "id": "B",
+     "text": "Abweichungen zwischen bestellten und abgerechneten Beträgen",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Abweichungen zwischen bestellter und gelieferter Menge",
+     "richtig": false
+    },
+    {
+     "id": "D",
+     "text": "Zeitdifferenzen zwischen Bestell- und Lieferdatum",
+     "richtig": true
+    }
+   ],
+   "anzahlRichtig": 1
+  },
+  {
+   "id": 50,
+   "nr": 50,
+   "quelle": "S4520 · Kapitel 8",
+   "frage": "Worauf basiert die Lieferantenbewertung nach Qualität?",
+   "antworten": [
+    {
+     "id": "A",
+     "text": "Auf den Prüfergebnissen von Wareneingängen (Prüflose)",
+     "richtig": true
+    },
+    {
+     "id": "B",
+     "text": "Auf den Preisabweichungen in der Rechnungsprüfung",
+     "richtig": false
+    },
+    {
+     "id": "C",
+     "text": "Auf Qualitätsmeldungen, z. B. Beschwerden und Qualitätsabweichungen",
+     "richtig": true
+    },
+    {
+     "id": "D",
+     "text": "Auf der Anzahl der Bestellungen pro Jahr",
+     "richtig": false
+    }
+   ],
+   "anzahlRichtig": 2
+  }
+ ]
+}
