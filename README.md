@@ -17,6 +17,10 @@ wird nur lokal im Browser des jeweiligen Geräts gespeichert.
   - *Übungsfragen (KI-generiert)* (`data/fragen_ki.json`, 50 Fragen aus den Lernzusammenfassungen
     S4500/S4520, Kapitel 1–8): Prüfung mit allen 50 Fragen in 75 Minuten (gleiches Tempo, 1,5 Min./Frage).
   Lernstand und Prüfungen werden je Set getrennt gespeichert (`lerntool.v1` bzw. `lerntool.ki.v1`).
+- **Erklärungen** (Reiter oben, nur für die 89 Original-Fragen): pro Frage die Fundstelle in den
+  Büchern S4500/S4520 (Kapitel, Lektion, Seite), eine kurze Begründung, warum jede Antwort richtig
+  oder falsch ist, und eine offene Frage zum Selbst-Beantworten. Im Lernmodus nach dem Prüfen und
+  in der Prüfungsauswertung als aufklappbarer Bereich.
 - Hinweis „X richtige Antworten“ bei Fragen mit mehreren richtigen Antworten.
 - Als App installierbar („Zum Home-Bildschirm“) und offline nutzbar.
 
@@ -66,3 +70,12 @@ python -m http.server 8000
 ```
 Dann http://localhost:8000 öffnen (direktes Öffnen der HTML-Datei funktioniert nicht,
 weil die Fragen per `fetch` geladen werden).
+
+## Erklärungen bearbeiten
+
+Die Erklärungen stehen lesbar in `tools/erklaerungen_quelle.py` (pro Frage Fundstellen, Begründung
+je Antwort, offene Frage). Nach einer Änderung `python tools/erklaerungen_quelle.py` ausführen und
+`data/erklaerungen.json` committen. Das Skript prüft, dass „Richtig/Falsch“ zum Lösungsschlüssel passt.
+Die Erklärungen hängen am Fragetext: Ändert sich eine Frage in der Excel, verschwindet ihre Erklärung,
+bis sie in der Quelle angepasst ist. Bitte keine wörtlichen Auszüge aus den Büchern aufnehmen und die
+PDFs nicht ins Repository legen (das Repository ist öffentlich).

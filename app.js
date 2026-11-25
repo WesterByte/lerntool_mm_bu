@@ -149,8 +149,35 @@
       seiteFragen.filter = null;
       seitePruefung.uebersicht = false;
       try { localStorage.setItem(SET_WAHL_KEY, setId); } catch (e) { /* ignorieren */ }
+      if (setId === "original") {
+        erklaerungenLaden().then(function () {
+          // Falls gerade eine aufgelöste Karte oder die Auswertung angezeigt wird: Erklärung nachreichen
+          var h = location.hash;
+          if (SET_ID === "original" && (h === "#/ergebnis" || (h === "#/lernen" && lern && lern.aktuell && lern.aktuell.geprueft))) route();
+        }, function () { /* ohne Erklärungen weiterlernen */ });
+      }
     });
   }
+  // Erklärungen (nur für die Original-Fragen), Zuordnung über denselben Schlüssel wie der Fortschritt
+  var ERKL = null;           // {buecher, nachKey}
+  var erklLaeuft = null;
+  function erklaerungenLaden() {
+    if (ERKL) return Promise.resolve(ERKL);
+    if (erklLaeuft) return erklLaeuft;
+    erklLaeuft = fetch("data/erklaerungen.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        var nachKey = {};
+        d.erklaerungen.forEach(function (e) { nachKey[e.key] = e; });
+        return (ERKL = { buecher: d.buecher || {}, nachKey: nachKey });
+      })
+      .catch(function (err) { erklLaeuft = null; throw err; });
+    return erklLaeuft;
+  }
+  function erklaerungZu(q) {
+    return SET_ID === "original" && ERKL ? ERKL.nachKey[q.key] || null : null;
+  }
+
   function gespeichertesSet() {
     try { return localStorage.getItem(SET_WAHL_KEY) || "original"; } catch (e) { return "original"; }
   }
@@ -191,11 +218,22 @@
     var teile = h.split("?");
     var seite = teile[0];
     window.scrollTo(0, 0);
+    document.body.classList.toggle("im-test", seite === "pruefung");
+    navMarkieren(seite === "erklaerungen" ? "erklaerungen" : "start");
+    if (seite === "erklaerungen") return seiteErklaerungen(teile[1] || "");
     if (seite === "lernen") return seiteLernen();
     if (seite === "pruefung") return seitePruefung();
     if (seite === "ergebnis") return seiteErgebnis();
     if (seite === "fragen") return seiteFragen();
     return seiteStart();
+  }
+
+  function navMarkieren(aktiv) {
+    var links = document.querySelectorAll(".topnav a");
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].getAttribute("data-nav") === aktiv) links[i].setAttribute("aria-current", "page");
+      else links[i].removeAttribute("aria-current");
+    }
   }
 
   // ---------- Startseite ----------
@@ -265,6 +303,7 @@
 
     html += '<div class="btn-row" style="margin-top:16px">' +
       '<a class="btn" href="#/fragen">Alle Fragen &amp; Fortschritt</a>' +
+      '<a class="btn" href="#/erklaerungen">Erklärungen zu den Original-Fragen</a>' +
       '<button class="btn" id="teilen">Link teilen</button></div>' +
       '<label class="opt small muted" style="margin-top:12px"><input type="checkbox" id="opt-mischen"' + (speicher.einstellungen.mischen ? " checked" : "") + "> Antwortreihenfolge mischen</label>" +
       '<p class="small muted">Dein Fortschritt wird nur in diesem Browser auf diesem Gerät gespeichert.</p>';
@@ -384,6 +423,8 @@
     if (karte.geprueft) {
       html += karte.korrekt ? '<div class="feedback ok">Richtig!</div>' :
         '<div class="feedback bad">Leider falsch. Die Karte kommt gleich noch einmal.</div>';
+      var erkl = erklaerungZu(q);
+      if (erkl) html += erklaerungHtml(q, erkl, karte.ordnung, { aufklappbar: true, offen: karte.erklOffen });
     }
     html += '</div><div class="actions-sticky btn-row">' +
       '<a class="btn" href="#/" id="beenden">Beenden</a>' +
@@ -399,6 +440,8 @@
       karte.gewaehlt = auswahlUmschalten(q, karte.gewaehlt, b.getAttribute("data-id"));
       seiteLernen();
     };
+    var det = $app.querySelector("details.erkl");
+    if (det) det.ontoggle = function () { karte.erklOffen = det.open; };
     var pb = document.getElementById("pruefen");
     if (pb) pb.onclick = pruefen;
     var wb = document.getElementById("weiter");
@@ -603,7 +646,8 @@
       return '<div class="review-item" id="r-' + d.key + '"><div class="q-meta"><b>Frage ' + (i + 1) + "</b>" +
         (d.korrekt ? '<span class="chip ok">richtig</span>' : '<span class="chip bad">' + (d.gewaehlt.length ? "falsch" : "nicht beantwortet") + "</span>") +
         hinweisChip(q) + '<span class="small">(Nr. ' + q.nr + ")</span></div>" +
-        '<div class="q-text">' + esc(q.frage) + "</div>" + antwortenHtml(q, d.ordnung, d.gewaehlt, "aufloesung") + "</div>";
+        '<div class="q-text">' + esc(q.frage) + "</div>" + antwortenHtml(q, d.ordnung, d.gewaehlt, "aufloesung") +
+        (erklaerungZu(q) ? erklaerungHtml(q, erklaerungZu(q), d.ordnung, { aufklappbar: true }) : "") + "</div>";
     }).join("") + "</div>";
     $app.innerHTML = html;
 
@@ -621,6 +665,114 @@
     var fl = document.getElementById("falsch-lernen");
     if (fl) fl.onclick = function () { lernSitzungStarten(falsch.map(function (d) { return d.key; })); location.hash = "#/lernen"; };
     document.getElementById("neu").onclick = function () { pruefungStarten(); location.hash = "#/pruefung"; };
+  }
+
+  // ---------- Erklärungen ----------
+  // Zerlegt "Richtig (laut Lösung). Text" in Bewertung und Begründung
+  function begruendung(text) {
+    var m = /^(Richtig|Falsch)( \(laut Lösung\))?\.\s*/.exec(text);
+    return m ? { richtig: m[1] === "Richtig", lautLoesung: !!m[2], text: text.slice(m[0].length) } : { richtig: null, text: text };
+  }
+  function fundstelleHtml(f) {
+    var seiten = f.seiten.length > 1 ? "S. " + f.seiten.join(", ") : "S. " + f.seiten[0];
+    return "<li><b>" + esc(f.buch) + "</b>, " + esc(f.kapitel || "") +
+      (f.lektion ? " › Lektion „" + esc(f.lektion) + "“" : "") + ", <b>" + seiten + "</b></li>";
+  }
+  // ordnung: Reihenfolge der Antworten wie auf der Karte (Buchstaben passen dann zur Anzeige)
+  function erklaerungHtml(q, e, ordnung, opt) {
+    opt = opt || {};
+    var inhalt =
+      '<div class="erkl-block"><h3>Wo steht die Antwort?</h3><ul class="fund">' + e.fundstellen.map(fundstelleHtml).join("") + "</ul></div>" +
+      '<div class="erkl-block"><h3>Warum richtig oder falsch?</h3><ul class="begr">' +
+      ordnung.map(function (id, i) {
+        var a = antwortVon(q, id), b = begruendung(e.antworten[id] || "");
+        var ok = b.richtig === null ? a.richtig : b.richtig;
+        return '<li class="' + (ok ? "r" : "f") + '"><span class="mark" aria-hidden="true">' + buchstabe(i) + "</span><div>" +
+          '<span class="urteil">' + (ok ? "✓ Richtig" : "✗ Falsch") + (b.lautLoesung ? " (laut Lösung)" : "") + "</span> " +
+          (opt.aufklappbar ? "" : '<span class="atext">' + esc(a.text) + "</span>") +
+          "<p>" + esc(b.text) + "</p></div></li>";
+      }).join("") + "</ul></div>" +
+      (e.hinweis ? '<div class="erkl-hinweis"><b>Hinweis:</b> ' + esc(e.hinweis) + "</div>" : "") +
+      '<div class="erkl-frage"><h3>Zum Nachdenken</h3><p>' + esc(e.offeneFrage) + "</p></div>";
+    if (!opt.aufklappbar) return '<div class="erkl">' + inhalt + "</div>";
+    return '<details class="erkl"' + (opt.offen ? " open" : "") + "><summary>Erklärung &amp; Fundstelle im Buch</summary>" + inhalt + "</details>";
+  }
+
+  function seiteErklaerungen(query) {
+    var params = {};
+    query.split("&").forEach(function (p) { var kv = p.split("="); if (kv[0]) params[kv[0]] = decodeURIComponent(kv[1] || ""); });
+    $app.innerHTML = '<p class="muted">Lade Erklärungen …</p>';
+    var meinAufruf = location.hash;
+    Promise.all([datenLaden("original"), erklaerungenLaden()]).then(function (r) {
+      if (location.hash !== meinAufruf) return;
+      zeichnen(r[0].fragen, r[1]);
+    }, function (err) {
+      $app.innerHTML = '<div class="card"><h1>Erklärungen konnten nicht geladen werden</h1><p class="muted">' + esc(err.message || err) + "</p></div>";
+    });
+
+    function zeichnen(fragen, erkl) {
+      var st = seiteErklaerungen.zustand || (seiteErklaerungen.zustand = { suche: "", filter: "alle" });
+      var mitFortschritt = SET_ID === "original";
+      var falschKeys = {};
+      if (mitFortschritt) fragen.forEach(function (q) { var f = speicher.fortschritt[q.key]; if (f && f.falsch > 0) falschKeys[q.key] = true; });
+      var nFalsch = Object.keys(falschKeys).length;
+      if (!mitFortschritt || !nFalsch) st.filter = "alle";
+      var ziel = params.nr ? +params.nr : null;
+      if (ziel) st.suche = "";
+
+      var bkeys = Object.keys(erkl.buecher);
+      var html = '<div class="card"><h1>Erklärungen · Original-Fragen</h1>' +
+        '<p class="muted">Zu jeder der ' + fragen.length + ' Original-Fragen: wo die Antwort im Buch steht, warum jede Antwort richtig oder falsch ist, und eine offene Frage zum Selbst-Beantworten.</p>' +
+        '<ul class="small muted buecher">' + bkeys.map(function (b) { return "<li>" + esc(erkl.buecher[b]) + "</li>"; }).join("") + "</ul>" +
+        '<p class="small muted">Seitenzahlen = gedruckte Seiten im Teilnehmerhandbuch. Die Begründungen sind eigene Kurzfassungen, keine Zitate.</p>' +
+        '<input type="search" id="erkl-suche" class="suche" placeholder="Suchen, z. B. Orderbuch oder Frage 42" aria-label="Erklärungen durchsuchen" value="' + esc(st.suche) + '">' +
+        (mitFortschritt && nFalsch ? '<div class="tabs" style="margin-top:10px"><button data-f="alle" aria-pressed="' + (st.filter === "alle") + '">Alle (' + fragen.length + ")</button>" +
+          '<button data-f="falsch" aria-pressed="' + (st.filter === "falsch") + '">Schon mal falsch beantwortet (' + nFalsch + ")</button></div>" : "") +
+        '<div class="btn-row" style="margin-top:10px"><button class="btn small" id="alle-auf">Alle aufklappen</button><button class="btn small" id="alle-zu">Alle zuklappen</button></div>' +
+        "</div>" +
+        '<div id="erkl-liste">' + fragen.map(function (q) {
+          var e = erkl.nachKey[q.key];
+          var ordnung = q.antworten.map(function (a) { return a.id; });
+          var such = (q.nr + " " + q.frage + " " + q.antworten.map(function (a) { return a.text; }).join(" ") + " " +
+            (e ? e.fundstellen.map(function (f) { return f.buch + " " + f.kapitel + " " + f.lektion; }).join(" ") : "")).toLowerCase();
+          return '<details class="card erkl-eintrag" id="e-' + q.nr + '" data-key="' + q.key + '" data-such="' + esc(such) + '"' + (ziel === q.nr ? " open" : "") + ">" +
+            '<summary><span class="nr">Frage ' + q.nr + "</span>" + (falschKeys[q.key] ? '<span class="chip bad">schon mal falsch</span>' : "") +
+            '<span class="ftext">' + esc(q.frage) + "</span></summary>" +
+            (e ? '<div class="erkl-quelle small muted">' + e.fundstellen.map(function (f) { return esc(f.buch) + " S. " + f.seiten.join(", "); }).join(" · ") + "</div>" +
+              erklaerungHtml(q, e, ordnung, {}) : '<p class="muted">Zu dieser Frage gibt es noch keine Erklärung.</p>') +
+            "</details>";
+        }).join("") + '</div><p class="muted small" id="erkl-leer" hidden>Keine Frage gefunden.</p>';
+      $app.innerHTML = html;
+
+      var eintraege = $app.querySelectorAll(".erkl-eintrag");
+      function filtern() {
+        var w = st.suche.toLowerCase().trim(), n = 0;
+        var nrSuche = /^(frage\s*)?(\d+)$/.exec(w);
+        for (var i = 0; i < eintraege.length; i++) {
+          var el = eintraege[i];
+          var passt = nrSuche ? el.id === "e-" + nrSuche[2] : (!w || el.getAttribute("data-such").indexOf(w) >= 0);
+          if (st.filter === "falsch" && !falschKeys[el.getAttribute("data-key")]) passt = false;
+          el.hidden = !passt; if (passt) n++;
+        }
+        document.getElementById("erkl-leer").hidden = n > 0;
+      }
+      filtern();
+      var suche = document.getElementById("erkl-suche");
+      suche.oninput = function () { st.suche = suche.value; filtern(); };
+      var tabs = $app.querySelector(".card .tabs");
+      if (tabs) tabs.onclick = function (ev) {
+        var b = ev.target.closest("[data-f]"); if (!b) return;
+        st.filter = b.getAttribute("data-f");
+        tabs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        filtern();
+      };
+      document.getElementById("alle-auf").onclick = function () { eintraege.forEach(function (d) { if (!d.hidden) d.open = true; }); };
+      document.getElementById("alle-zu").onclick = function () { eintraege.forEach(function (d) { d.open = false; }); };
+      if (ziel) {
+        var z = document.getElementById("e-" + ziel);
+        if (z) { z.hidden = false; z.scrollIntoView({ block: "start" }); }
+      }
+    }
   }
 
   // ---------- Fragenübersicht ----------

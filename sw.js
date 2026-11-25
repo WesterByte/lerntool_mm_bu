@@ -2,8 +2,8 @@
    Strategie "zuerst Netzwerk": Online kommt immer die aktuelle Version (Abgleich mit dem
    Server, am HTTP-Cache des Browsers vorbei). Nur offline wird die gespeicherte Kopie genutzt.
    So erreichen Updates alle Nutzer, ohne dass jemand den Cache leeren muss. */
-var CACHE = "lerntool-v3";
-var DATEIEN = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "data/fragen.json", "data/fragen_ki.json",
+var CACHE = "lerntool-v4";
+var DATEIEN = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "data/fragen.json", "data/fragen_ki.json", "data/erklaerungen.json",
   "icons/icon.svg", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", function (e) {

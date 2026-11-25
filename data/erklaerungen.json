@@ -1,0 +1,2284 @@
+{
+ "buecher": {
+  "S4500": "S4500 – Geschäftsprozesse in SAP S/4HANA Sourcing and Procurement (Teilnehmerhandbuch, Version 26)",
+  "S4520": "S4520 – Einkauf in SAP S/4HANA (Teilnehmerhandbuch, Version 26)"
+ },
+ "erklaerungen": [
+  {
+   "nr": 1,
+   "key": "48b6ac53",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Bestellanforderungen freigeben",
+     "seiten": [
+      350
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Einkaufsbelege freigeben",
+     "seiten": [
+      361
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Bestellungen und andere Einkaufsbelege werden nur auf Kopfebene freigegeben oder abgelehnt; eine Freigabe pro Position gibt es nur bei Bestellanforderungen.",
+    "B": "Richtig. Genau das ist der Zweck der Bestellfreigabe: Solange die Bestellung gesperrt ist, kann die Nachricht (Druck, E-Mail, EDI) nicht an den Lieferanten ausgegeben werden.",
+    "C": "Falsch. Wie viele Stufen es gibt und in welcher Reihenfolge freigegeben wird, legt die jeweilige Freigabestrategie fest. Das können auch eine oder mehr als zwei Stufen sein.",
+    "D": "Falsch. Eine gesperrte Bestellung ist für die Weiterverarbeitung blockiert; Wareneingang und Rechnung sind erst nach der Freigabe möglich."
+   },
+   "offeneFrage": "Warum setzt die Sperre bei Bestellungen gerade an der Nachrichtenausgabe an und nicht schon beim Sichern? Welches Risiko wird damit vermieden?"
+  },
+  {
+   "nr": 2,
+   "key": "c8c02b04",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      33
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Buchungskreis ist eine Einheit des Rechnungswesens; mengenmäßig werden dort keine Bestände geführt.",
+    "B": "Falsch. Die Lagernummer gehört zur Lagerverwaltung (EWM/WM) und ist nicht die Ebene der mengenmäßigen Bestandsführung in MM.",
+    "C": "Richtig. Die mengenmäßige Bestandsführung im Werk erfolgt auf Lagerortebene; dort wird auch die Inventur durchgeführt.",
+    "D": "Falsch. Lagerplätze sind eine Ebene der Lagerverwaltung unterhalb des Lagerorts, nicht die Ebene der Bestandsführung in MM."
+   },
+   "offeneFrage": "Warum wird der Bestand mengenmäßig auf Lagerortebene, wertmäßig aber auf Werks- oder Buchungskreisebene geführt? Was wäre der Nachteil, wenn auch der Wert pro Lagerort geführt würde?"
+  },
+  {
+   "nr": 3,
+   "key": "2fcd671c",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Zusätzliche Sonderfunktionen einsetzen",
+     "seiten": [
+      446,
+      447
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Bestellungen können vorerfasst und gemerkt werden (z. B. in ME21N).",
+    "B": "Falsch. Kontrakte werden im Buch nicht genannt; die Funktionen gelten für Bestellanforderungen und Bestellungen.",
+    "C": "Falsch. Auch Anfragen gehören nicht dazu.",
+    "D": "Richtig. Bestellanforderungen können ebenfalls vorerfasst und gemerkt werden (z. B. in ME51N)."
+   },
+   "offeneFrage": "Die Fiori-App „Bestellungen verwalten“ kennt kein Merken und Vorerfassen. Wie löst sie das Problem halbfertiger Belege, und was ist bei Entwürfen für die Disposition zu beachten?"
+  },
+  {
+   "nr": 4,
+   "key": "9d1f8daa",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Weitere Aspekte der Bezugsquellenfindung identifizieren",
+     "seiten": [
+      239,
+      240
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Rahmenverträge und Infosätze werden erst geprüft, wenn es weder Quotierung noch Orderbuch gibt.",
+    "B": "Richtig. Außerhalb des Planungslaufs gilt: zuerst Quotierung, dann Orderbuch, dann Rahmenvertragspositionen und zuletzt Infosätze.",
+    "C": "Falsch. Eine gültige Quotierung hat immer die höchste Priorität und wird vor dem Orderbuch geprüft.",
+    "D": "Falsch. Die Reihenfolge ist umgekehrt: Quotierung und Orderbuch stehen vor Rahmenverträgen und Infosätzen."
+   },
+   "offeneFrage": "Im Planungslauf (MRP) weicht die Reihenfolge ab, etwa bei Lieferplänen und Kontrakten. Was ist dort anders, und warum braucht die Disposition für Rahmenverträge ein disporelevantes Orderbuch?"
+  },
+  {
+   "nr": 5,
+   "key": "aa1cc513",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Rechnung erfassen",
+     "seiten": [
+      68
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Materialbewertung analysieren",
+     "seiten": [
+      143
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Obligo entsteht schon mit der kontierten Bestellung im Controlling. Die Rechnung legt keinen eigenen Obligobeleg an.",
+    "B": "Falsch. Ein Wareneingangsbeleg (Materialbeleg) entsteht beim Wareneingang, nicht bei der Rechnung.",
+    "C": "Richtig. Die Logistik-Rechnungsprüfung legt einen Rechnungsbeleg in MM an.",
+    "D": "Richtig. Zusätzlich wird ein separater Buchhaltungsbeleg in FI erzeugt, z. B. Kreditor an WE/RE-Konto."
+   },
+   "offeneFrage": "Welche Konten werden beim Buchen einer Rechnung zu einer Lagerbestellung typischerweise angesprochen, und was passiert mit dem WE/RE-Verrechnungskonto?"
+  },
+  {
+   "nr": 6,
+   "key": "c5777b64",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      33
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. „Verschiedene Daten“ ist keine Organisationsebene.",
+    "B": "Falsch. Der Buchungskreis wird erst in den Belegen (z. B. über das Werk) bestimmt, nicht bei der Anmeldung.",
+    "C": "Richtig. Benutzerstammsätze und Berechtigungen gibt es pro Mandant; bei der Anmeldung geben Sie den Mandanten an.",
+    "D": "Falsch. Die Einkaufsorganisation geben Sie in Einkaufsbelegen an, nicht beim Anmelden."
+   },
+   "offeneFrage": "Was bedeutet es für Ihre Arbeit, dass alle Eingaben mandantenspezifisch gespeichert werden? Denken Sie an Test- und Produktivmandanten."
+  },
+  {
+   "nr": 7,
+   "key": "5cb6cb58",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Geschäftspartner-Stammdaten pflegen",
+     "seiten": [
+      87
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Geschäftspartner anlegen",
+     "seiten": [
+      23
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Rückmeldebeleg kommt aus der Fertigung und ist keine Datenkategorie des Geschäftspartners.",
+    "B": "Falsch. „Geschäftsbereichsdaten“ ist keine Kategorie der Lieferantendaten.",
+    "C": "Richtig. Einkaufsdaten werden je Einkaufsorganisation gepflegt, z. B. Bestellwährung, Incoterms, Partnerrollen und Steuerungskennzeichen.",
+    "D": "Richtig. Allgemeine Daten wie Anschrift und Bankverbindung gelten mandantenweit.",
+    "E": "Richtig. Buchhaltungsdaten (Buchungskreisdaten) werden pro Buchungskreis gepflegt, z. B. Abstimmkonto und Zahlwege."
+   },
+   "offeneFrage": "Ordnen Sie jede Kategorie ihrer Organisationsebene zu. Warum liegt die Bankverbindung auf Mandantenebene, das Abstimmkonto aber auf Buchungskreisebene?"
+  },
+  {
+   "nr": 8,
+   "key": "a99336b9",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Bestellanforderungen freigeben",
+     "seiten": [
+      353
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Für die Sammelfreigabe brauchen Sie keinen speziellen Code; Sie geben Ihren normalen Freigabecode ein und erhalten alle Belege, die Sie damit freigeben dürfen.",
+    "B": "Richtig. Die Sammelfreigabe listet alle Positionen und Bestellanforderungen zu Ihrem Freigabecode auf, sodass Sie viele auf einmal freigeben können.",
+    "C": "Richtig. Mit der Einzelfreigabe können Sie bei Positionsfreigabe jede Position für sich freigeben oder ablehnen.",
+    "D": "Falsch. Die Einzelfreigabe bearbeitet immer eine Bestellanforderung. Mehrere Belege gleichzeitig gehen nur mit der Sammelfreigabe."
+   },
+   "offeneFrage": "In welcher Situation würden Sie bewusst die Einzelfreigabe statt der Sammelfreigabe wählen, obwohl Sie viele Belege freizugeben haben? (Tipp: Was kann die Sammelfreigabe nicht?)"
+  },
+  {
+   "nr": 9,
+   "key": "95a36f4f",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Lieferpläne mit Abrufdokumentation anlegen",
+     "seiten": [
+      153,
+      154,
+      155,
+      156
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Feinabrufe informieren über den kurzfristigen Bedarf, tages- oder sogar stundengenau.",
+    "B": "Falsch. Es gibt nur das Feinabrufkennzeichen. Bleibt es leer, sind nur Lieferabrufe möglich; mit Wert 1 sind auch Feinabrufe möglich.",
+    "C": "Falsch. Abrufe können auch direkt in der Einteilungspflege (ME38: LAB bzw. FAB erzeugen) oder automatisch per Bericht angelegt werden.",
+    "D": "Richtig. Lieferabrufe geben dem Lieferanten einen mittel- bis langfristigen Überblick.",
+    "E": "Richtig. Liefer- und Feinabrufe gibt es nur bei Lieferplänen mit Abrufdokumentation (z. B. Belegart LPA)."
+   },
+   "offeneFrage": "Warum muss das Feinabrufkennzeichen schon im Materialstamm gesetzt sein, bevor der Lieferplan angelegt wird? Was würden Sie tun, wenn Sie es vergessen haben?"
+  },
+  {
+   "nr": 10,
+   "key": "7e64aacb",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellenfindung mit Orderbüchern steuern",
+     "seiten": [
+      185,
+      186,
+      188
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Orderbücher pflegen",
+     "seiten": [
+      204
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Eine Obergrenze von 20 Orderbuchsätzen pro Material gibt es nicht.",
+    "B": "Falsch. Ein Orderbuchsatz kann direkt mit Lieferant und Einkaufsorganisation angelegt werden; ein Infosatz ist dafür nicht nötig. Nötig ist nur ein Materialstammsatz, denn Materialien ohne Stammsatz lassen sich nicht über das Orderbuch sperren.",
+    "C": "Richtig. Jeder Orderbuchsatz hat einen Gültigkeitszeitraum, in dem seine Einstellungen (fix, gesperrt, Disposition) gelten.",
+    "D": "Richtig. Im Customizing lässt sich die Orderbuchpflicht für ein ganzes Werk festlegen. Dann braucht jedes Material dieses Werks einen gültigen Orderbuchsatz, bevor es bestellt werden kann."
+   },
+   "offeneFrage": "Gegen welches Datum prüft das System den Gültigkeitszeitraum bei einer manuellen Bestellanforderung, und gegen welches im Planungslauf?"
+  },
+  {
+   "nr": 11,
+   "key": "b82c1b21",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bewertete und unbewertete Wareneingänge erfassen",
+     "seiten": [
+      213,
+      223
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Wareneingang ist weiterhin möglich, er wird nur ohne Wert gebucht.",
+    "B": "Richtig. Beim unbewerteten Wareneingang gibt es keine Buchung auf Verbrauchs- oder WE/RE-Konto. Bewertet wird erst beim Rechnungseingang.",
+    "C": "Falsch. Die Menge wird beim Wareneingang fortgeschrieben, nur ein Wert wird nicht gebucht.",
+    "D": "Falsch. Die Position wird bewertet, nur später, nämlich mit der Rechnung."
+   },
+   "offeneFrage": "Warum kann es sinnvoll sein, bei kontierten Bestellungen den Wareneingang unbewertet zu buchen? Denken Sie an den Zeitpunkt, zu dem Kosten auf der Kostenstelle erscheinen."
+  },
+  {
+   "nr": 12,
+   "key": "496e2738",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Rechnungspläne verwenden",
+     "seiten": [
+      407,
+      408
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Wareneingang gesetzt und „WE unbewertet“ gesetzt ist erlaubt, denn es darf nur ein unbewerteter Wareneingang erfolgen.",
+    "B": "Richtig. Ohne Wareneingangskennzeichen, nur mit Rechnungseingang, ist ebenfalls erlaubt.",
+    "C": "Falsch. Damit würde ein bewerteter Wareneingang erwartet, und das ist bei Rechnungsplänen nicht zulässig.",
+    "D": "Falsch. Ohne Rechnungseingangskennzeichen gäbe es nichts abzurechnen, der Rechnungsplan liefe ins Leere."
+   },
+   "offeneFrage": "Warum verträgt sich ein Rechnungsplan nicht mit einem bewerteten Wareneingang? Denken Sie an das WE/RE-Verrechnungskonto."
+  },
+  {
+   "nr": 13,
+   "key": "3f3a52ad",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Materialstammsätze für den Einkauf anlegen",
+     "seiten": [
+      6,
+      7
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Lagerort ist eine Organisationsebene, die Sie beim Pflegen der Lagerdaten angeben. Die Materialart legt ihn nicht fest.",
+    "B": "Richtig. Die Materialart steuert Nummernkreis und Art der Nummernvergabe (intern oder extern).",
+    "C": "Falsch. Ob auf Werks- oder Buchungskreisebene bewertet wird, ist eine Customizing-Einstellung (Bewertungskreis) und hängt nicht von der Materialart ab.",
+    "D": "Richtig. Die Materialart bestimmt, welche Datenbilder und Fachbereiche (Sichten) gepflegt werden können und in welcher Reihenfolge.",
+    "E": "Richtig. Die Materialart legt fest, ob ein Material fremdbeschafft, eigengefertigt oder beides werden darf (z. B. ROH nur fremd)."
+   },
+   "offeneFrage": "Sie möchten ein Material von NLAG auf ROH umstellen. Welche Voraussetzungen müssen erfüllt sein, und warum verlangt das System das?"
+  },
+  {
+   "nr": 14,
+   "key": "48cec83e",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 1: Navigation in SAP S/4HANA",
+     "lektion": "Arbeiten mit dem SAP GUI",
+     "seiten": [
+      15
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Über die Favoriten im SAP-Easy-Access-Menü können Sie navigieren.",
+    "B": "Falsch. Transaktionen aus Excel heraus aufzurufen ist keine Navigationsart im SAP GUI.",
+    "C": "Richtig. Transaktionscodes können direkt im Befehlsfeld eingegeben werden.",
+    "D": "Falsch. Die Statusleiste zeigt Meldungen und Systeminformationen an; navigieren lässt sich darüber nicht."
+   },
+   "offeneFrage": "Welche drei Navigationswege nennt das Buch für das SAP GUI, und welchen nutzen Sie im Alltag am häufigsten?"
+  },
+  {
+   "nr": 15,
+   "key": "f417258c",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      33
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Materialstammdaten pflegen",
+     "seiten": [
+      105
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Werksbezogen sind z. B. Einkäufergruppe oder Dispositionsdaten, nicht die Grunddaten.",
+    "B": "Falsch. Kombinationen aus Buchungskreis und Werk sind keine eigene Ebene im Materialstamm.",
+    "C": "Richtig. Grunddaten wie Kurztext, Basismengeneinheit oder Warengruppe gelten mandantenweit und werden genau einmal gepflegt.",
+    "D": "Falsch. Der Buchungskreis spielt für die Grunddaten keine Rolle; er kann allenfalls Bewertungsebene sein."
+   },
+   "offeneFrage": "Welche Daten desselben Materials müssen Sie in diesem Beispiel trotzdem fünfmal pflegen, und warum?"
+  },
+  {
+   "nr": 16,
+   "key": "b426710b",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Einen Wareneingang buchen",
+     "seiten": [
+      58
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Materialbewertung analysieren",
+     "seiten": [
+      142
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Weil der Wareneingang bewertet ist, entsteht zusätzlich ein Buchhaltungsbeleg.",
+    "B": "Falsch. Ein Obligobeleg wird beim Wareneingang nicht erzeugt; bei Kontierung wird das Obligo höchstens abgebaut.",
+    "C": "Falsch. Ein Rechnungsbeleg entsteht erst in der Rechnungsprüfung.",
+    "D": "Richtig. Jede Warenbewegung erzeugt einen Materialbeleg."
+   },
+   "offeneFrage": "Nennen Sie eine Warenbewegung, die nur einen Materialbeleg und keinen Buchhaltungsbeleg erzeugt. Warum ist das so?"
+  },
+  {
+   "nr": 17,
+   "key": "7cf3dacf",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Zusätzliche Sonderfunktionen einsetzen",
+     "seiten": [
+      447
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Für Rahmenbestellungen wird „Merken“ ausdrücklich nicht unterstützt.",
+    "B": "Richtig. Ein gemerkter Beleg ist für Folgeaktivitäten gesperrt, z. B. Umsetzung in eine Bestellung oder Wareneingang.",
+    "C": "Richtig. Beim Merken sind sämtliche Fehlerarten zulässig; der Beleg darf noch unvollständig sein.",
+    "D": "Falsch. Eine spezielle Belegart ist nicht nötig. Die Funktion wird einmal mandantenweit im Customizing aktiviert."
+   },
+   "offeneFrage": "Worin unterscheidet sich „Vorerfassen“ von „Merken“? Welche Fehler lässt Vorerfassen zu und welche nicht?"
+  },
+  {
+   "nr": 18,
+   "key": "08ed4b73",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Bestellanforderungen freigeben",
+     "seiten": [
+      354
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Die Registerkarte zeigt die ermittelte Freigabestrategie.",
+    "B": "Falsch. Angezeigt werden die Freigabecodes, also Freigabestellen. Welche Person dahintersteht, ergibt sich erst aus den Berechtigungen.",
+    "C": "Richtig. Die Freigabegruppe wird angezeigt; sie bestimmt zusammen mit der Belegart, ob Positions- oder Gesamtfreigabe gilt.",
+    "D": "Falsch. Ein Freigabedatum ist kein Bestandteil dieser Registerkarte.",
+    "E": "Richtig. Das Freigabekennzeichen zeigt den aktuellen Freigabezustand, zu Beginn meist „gesperrt“."
+   },
+   "offeneFrage": "Die Kriterien, die zur Sperre geführt haben, werden auf der Registerkarte nicht angezeigt. Wo würden Sie nachsehen, warum genau diese Strategie gezogen wurde?"
+  },
+  {
+   "nr": 19,
+   "key": "da073d82",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Limitbestellungen anlegen",
+     "seiten": [
+      419,
+      420
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Der erwartete Wert ist Pflicht; er dient als Bestellwert, für die Freigabe und für das Obligo.",
+    "B": "Richtig. Das Gesamtlimit ist die Obergrenze, bis zu der Rechnungen gebucht werden können.",
+    "C": "Falsch. In einer Limitposition können Sie keine Bestellmenge eingeben.",
+    "D": "Falsch. Einen Nettopreis geben Sie nicht ein; der erwartete Wert wird automatisch als Nettopreis übernommen."
+   },
+   "offeneFrage": "Was passiert, wenn eine Rechnung den erwarteten Wert überschreitet, aber unter dem Gesamtlimit bleibt? Und was, wenn das Gesamtlimit überschritten wird?"
+  },
+  {
+   "nr": 20,
+   "key": "230b71bc",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bestellanforderung anlegen",
+     "seiten": [
+      184
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Die Rechnungsprüfung bezieht sich auf Bestellungen, nicht auf Bestellanforderungen.",
+    "B": "Falsch. Einen Lieferschein erstellt der Lieferant bzw. der Versand, nicht der Einkauf aus einer Bestellanforderung.",
+    "C": "Richtig. Bestellanforderungen können in Anfragen, Bestellungen oder Rahmenverträge umgesetzt werden.",
+    "D": "Falsch. Ein Wareneingang braucht eine Bestellung (oder einen Lieferplan) als Bezug, keine Bestellanforderung."
+   },
+   "offeneFrage": "In welche drei Folgebelege kann eine Bestellanforderung laut Buch umgesetzt werden, und wann wählen Sie welchen?"
+  },
+  {
+   "nr": 21,
+   "key": "81e8ef6c",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Materialstammsätze für den Einkauf anlegen",
+     "seiten": [
+      5,
+      6
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Nur einige Einkaufsdaten (z. B. Einkaufswerteschlüssel, Bestelltext) gelten auf Mandantenebene.",
+    "B": "Richtig. Die meisten Einkaufsdaten wie Einkäufergruppe oder die Kennzeichen „Automatische Bestellung“ und „Orderbuchpflicht“ werden pro Werk gepflegt.",
+    "C": "Falsch. „Alle“ stimmt nicht, denn ein Teil der Einkaufsdaten liegt auf Mandantenebene."
+   },
+   "offeneFrage": "Warum ist es sinnvoll, dass die Orderbuchpflicht pro Werk und nicht mandantenweit gesetzt wird?"
+  },
+  {
+   "nr": 22,
+   "key": "73305bec",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Bestellanforderungen freigeben",
+     "seiten": [
+      354
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Das Freigabekennzeichen beschreibt nur den Zustand des Belegs (z. B. gesperrt oder freigegeben). Es ist kein Berechtigungsobjekt.",
+    "B": "Falsch. Wertgrenzen stecken in der Klassifizierung der Freigabestrategie, nicht in einer Berechtigung für „Freigabegrenzen“.",
+    "C": "Richtig. Freigegeben wird immer mit einem Freigabecode, und wer welchen Code benutzen darf, wird über Berechtigungen gesteuert.",
+    "D": "Falsch. Die Freigabeklasse sammelt im Customizing die Merkmale für die Strategiefindung. Sie hat mit der Berechtigung des Freigebenden nichts zu tun."
+   },
+   "offeneFrage": "Ein Kollege ist drei Wochen im Urlaub und hat einen Freigabecode, der in vielen Strategien vorkommt. Wie würden Sie die Vertretung organisieren, ohne die Strategien zu ändern?"
+  },
+  {
+   "nr": 23,
+   "key": "bcd3e3f4",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      271
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Kontrakten",
+     "seiten": [
+      111,
+      113
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Beim Kontrakt ist jeder Abruf eine eigene Bestellung. Weniger Belege hat man beim Lieferplan.",
+    "B": "Richtig. Über die Abrufdokumentation sehen Sie jederzeit, wie viel Zielmenge oder Zielwert schon abgerufen ist. Sie ist die Grundlage der Kontraktüberwachung.",
+    "C": "Falsch. Liefertermine vorab planen und als Vorschau senden ist eine Stärke des Lieferplans (Einteilungen, Lieferabrufe).",
+    "D": "Falsch. Die Disposition kann den Kontrakt nur als Bezugsquelle zuordnen; die Bestellanforderung muss trotzdem noch in einen Kontraktabruf umgesetzt werden. Direkte Einteilungen gibt es nur beim Lieferplan."
+   },
+   "offeneFrage": "Sie beziehen ein Material täglich in Serie. Würden Sie Kontrakt oder Lieferplan wählen? Begründen Sie mit Belegvolumen und Disposition."
+  },
+  {
+   "nr": 24,
+   "key": "3782893d",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bestellanforderung anlegen",
+     "seiten": [
+      184,
+      185
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch (laut Buch). Der Bewertungspreis wird aus dem Materialstamm gezogen; der Infosatzpreis spielt erst bei der Umsetzung in die Bestellung eine Rolle.",
+    "B": "Falsch. Genau umgekehrt: Bei unbewertetem Material oder Material ohne Stammsatz muss der Ersteller den Bewertungspreis selbst eingeben.",
+    "C": "Falsch. Das „nie“ stimmt nicht; in den oben genannten Fällen ist die Eingabe nötig.",
+    "D": "Richtig. Bei bewertetem Material schlägt das System den Bewertungspreis aus dem Materialstammsatz vor."
+   },
+   "offeneFrage": "Wofür wird der Bewertungspreis der Bestellanforderung verwendet, und wird er in die Bestellung übernommen?"
+  },
+  {
+   "nr": 25,
+   "key": "01b13822",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      48,
+      49
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Mit der Lohnbearbeitung arbeiten",
+     "seiten": [
+      429
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Bei der Lohnbearbeitung wird Positionstyp L verwendet; B steht für Limit.",
+    "B": "Richtig (laut Lösung). Der Lieferant fertigt ein Endprodukt und braucht dafür Komponenten, die ihm beigestellt werden. Das Buch ergänzt, dass Komponenten auch von einem Drittlieferanten direkt an den Lohnbearbeiter geliefert werden können.",
+    "C": "Richtig. Mit der Umlagerungsbestellung wird Material zwischen Werken eines Unternehmens beschafft und geliefert.",
+    "D": "Falsch. Bei Konsignation wird Positionstyp K verwendet; L steht für Lohnbearbeitung."
+   },
+   "offeneFrage": "Welche Positionstypen gehören zu welchem Buchstaben: K, L, S, B, U? Und was passiert bei Lohnbearbeitung automatisch beim Wareneingang des Endprodukts?"
+  },
+  {
+   "nr": 26,
+   "key": "ccbcd3ea",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Lieferplänen",
+     "seiten": [
+      141,
+      142
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Zielwert ist typisch für Wertkontrakte; der Lieferplan arbeitet mit einer Gesamtabnahmemenge.",
+    "B": "Richtig. Ein Lieferplan gilt für einen vorgegebenen Zeitraum, deshalb braucht er ein Beginndatum (Laufzeit).",
+    "C": "Richtig. Lieferpläne sind immer werksbezogen; einen Zentral-Lieferplan ohne Werk gibt es nicht.",
+    "D": "Falsch. Das Abruferstellungsprofil ist nur bei Lieferplänen mit Abrufdokumentation relevant und auch dort optional.",
+    "E": "Richtig. Der Lieferplan gilt für eine vereinbarte Gesamtabnahmemenge, die Zielmenge der Position."
+   },
+   "offeneFrage": "Ein Kontrakt kann ein Zentralkontrakt ohne Werk sein, ein Lieferplan nicht. Warum ergibt das bei Lieferplänen Sinn? Denken Sie an die Einteilungen aus der Disposition."
+  },
+  {
+   "nr": 27,
+   "key": "267d53a1",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Geschäftspartner-Stammdaten pflegen",
+     "seiten": [
+      85,
+      87
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Gerade weil Geschäftspartner zentral gepflegt werden, sollten Sie vor dem Anlegen prüfen, ob der Lieferant schon existiert; sonst entstehen Dubletten.",
+    "B": "Falsch. Ein Geschäftspartner wird von Buchhaltung und Einkauf gemeinsam genutzt; jede Abteilung ergänzt nur ihre Rollen und Daten.",
+    "C": "Richtig. Durch die Integration gehen Rechnungen und Gutschriften automatisch mit den nötigen Daten in die Kreditorenbuchhaltung.",
+    "D": "Richtig. Der Geschäftspartner enthält allgemeine Daten, Buchungskreisdaten und Einkaufsdaten, also alles, was beide Bereiche brauchen."
+   },
+   "offeneFrage": "Was passiert im Hintergrund, wenn Sie einem Geschäftspartner die Rolle Kreditor (FLVN00) hinzufügen? Was bedeutet das für die Abstimmung zwischen Einkauf und Buchhaltung?"
+  },
+  {
+   "nr": 28,
+   "key": "abe06da2",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Materialstammsätze für den Einkauf anlegen",
+     "seiten": [
+      6
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellenfindung mit Orderbüchern steuern",
+     "seiten": [
+      187
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. „Automatische Bestellung“ erlaubt die automatische Umsetzung von Bestellanforderungen, schränkt aber die Bezugsquellen nicht ein.",
+    "B": "Falsch. Die Orderbuchpflicht ist eine Eigenschaft des Materials pro Werk, nicht des Lieferanten.",
+    "C": "Richtig. Die Orderbuchpflicht wird in den Einkaufsdaten des Materialstammsatzes auf Werksebene gesetzt.",
+    "D": "Falsch. Im Infosatz gibt es kein Kennzeichen „Orderbuchpflicht“."
+   },
+   "offeneFrage": "Wofür ist die Orderbuchpflicht laut Buch besonders nützlich? Fällt Ihnen ein Fall aus Ihrem Alltag ein, z. B. Lieferantenfreigabe durch die Qualitätssicherung?"
+  },
+  {
+   "nr": 29,
+   "key": "abdaf819",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Die erweiterte Transaktion zum Anlegen von Bestellungen verwenden",
+     "seiten": [
+      295,
+      296
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ein Doppelklick auf eine Bestellanforderung zeigt diese an.",
+    "B": "Falsch. Lieferpläne lassen sich aus der Belegübersicht nicht per Doppelklick anzeigen.",
+    "C": "Falsch. Auch Anfragen und Angebote nicht; das geht nur bei Bestellungen und Bestellanforderungen.",
+    "D": "Richtig. Ein Doppelklick auf eine Bestellung zeigt diese an."
+   },
+   "offeneFrage": "Ein Doppelklick zeigt einen Beleg nur an. Wie übernehmen Sie dagegen eine Bestellanforderung als Vorlage in Ihre neue Bestellung?"
+  },
+  {
+   "nr": 30,
+   "key": "d3100f31",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Vergleich der Beschaffungsprozesse für Lager- und Verbrauchsmaterial",
+     "seiten": [
+      180
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bewertete und unbewertete Wareneingänge erfassen",
+     "seiten": [
+      212
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Für Lagermaterial darf kein Kontierungstyp eingegeben werden, sonst wird für den Verbrauch beschafft.",
+    "B": "Falsch. Lagermaterial wird beim Wareneingang mengen- und wertmäßig fortgeschrieben; eine Wahlmöglichkeit gibt es nicht.",
+    "C": "Falsch. Der Lagerort ist in der Bestellung optional und kann spätestens beim Wareneingang angegeben werden.",
+    "D": "Richtig. Für Lagermaterial braucht es eine Materialnummer, also einen Materialstammsatz."
+   },
+   "offeneFrage": "Wann würden Sie ein Lagermaterial bewusst mit Kontierung bestellen? Nennen Sie ein Beispiel aus dem Buch."
+  },
+  {
+   "nr": 31,
+   "key": "d562e2f6",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Rechnungspläne verwenden",
+     "seiten": [
+      404,
+      405,
+      406
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. „Finanzrechnungspläne“ gibt es nicht.",
+    "B": "Richtig. Teilrechnungspläne teilen den Gesamtwert auf Termine auf, z. B. bei Projekten.",
+    "C": "Falsch. „Vollständige Rechnungspläne“ gibt es nicht.",
+    "D": "Richtig. Periodische Rechnungspläne rechnen den vollen Wert regelmäßig ab, z. B. Miete oder Leasing."
+   },
+   "offeneFrage": "Ordnen Sie zu: Wartungsvertrag mit Monatspauschale, Softwareprojekt mit drei Meilensteinen. Welche Rechnungsplanart passt jeweils?"
+  },
+  {
+   "nr": 32,
+   "key": "3bc192d9",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      127
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Besondere Infosätze anlegen",
+     "seiten": [
+      95,
+      96
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch (laut Lösung). Gemeint sind Infosätze ohne Materialstammsatz. Diese beziehen sich zwar auf eine Warengruppe, in der Lösung zählt aber die Formulierung „unabhängig vom Materialstamm“.",
+    "B": "Falsch. Ein Infosatz gilt nie für einen Lieferanten allein, sondern immer für eine Kombination aus Lieferant und Material oder Warengruppe.",
+    "C": "Richtig. Infosätze ohne Materialstammsatz, z. B. für Verbrauchsmaterial, gibt es.",
+    "D": "Richtig. Infosätze mit Materialstammsatz, z. B. für Lagermaterial, gibt es ebenfalls."
+   },
+   "offeneFrage": "Wird ein Warengruppen-Infosatz in der Bestellung automatisch als Bezugsquelle vorgeschlagen? Und in der Bestellanforderung?",
+   "hinweis": "Im Buch heißen die beiden Arten „Infosätze mit Materialstammsatz“ und „Infosätze ohne Materialstammsatz (Warengruppe/Lieferant)“."
+  },
+  {
+   "nr": 33,
+   "key": "7182b3f4",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Die erweiterte Transaktion zum Anlegen von Bestellungen verwenden",
+     "seiten": [
+      295
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. In der Belegübersicht wählen Sie Vorlagebelege aus, Vorschlagswerte pflegen Sie dort nicht.",
+    "B": "Richtig. Über die persönlichen Einstellungen (Pers. Einstellungen) hinterlegt jeder Benutzer eigene Vorschlagswerte in ME21N.",
+    "C": "Falsch. „Standardeinstellungen“ heißt die Funktion nicht.",
+    "D": "Falsch. „Individuelle Einstellungen“ heißt die Funktion ebenfalls nicht."
+   },
+   "offeneFrage": "Welche Vorschlagswerte würden Sie in ME21N hinterlegen, und welcher Wert lässt sich zusätzlich über den Benutzerparameter EVO vorbelegen?"
+  },
+  {
+   "nr": 34,
+   "key": "f45da94f",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      130,
+      131
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Grundlagen der Preisfindung analysieren",
+     "seiten": [
+      67,
+      70
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. In Bestellanforderungen pflegen Sie keine Konditionen, sondern nur einen Bewertungspreis.",
+    "B": "Falsch. Kopfkonditionen gelten für alle Positionen eines Belegs.",
+    "C": "Richtig. Konditionen können in Angeboten, Infosätzen, Rahmenverträgen und Bestellungen gespeichert werden.",
+    "D": "Richtig. Die Kontraktkonditionen kommen nur dann in die Bestellposition, wenn sie mit Bezug zum Kontrakt (als Kontraktabruf) angelegt wird."
+   },
+   "offeneFrage": "Sie legen eine Bestellung für ein Material an, für das es einen Infosatz und einen Kontrakt gibt, aber ohne Kontraktbezug. Welche Konditionen werden vorgeschlagen?"
+  },
+  {
+   "nr": 35,
+   "key": "c2a4823b",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Orderbücher pflegen",
+     "seiten": [
+      201,
+      202
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Orderbuchsätze können manuell gepflegt werden (ME01 bzw. App „Orderbücher verwalten“).",
+    "B": "Richtig. Aus einem Rahmenvertrag (Position → Orderbuch pflegen) oder aus einem Infosatz (Zusätze → Orderbuch) lassen sich Orderbuchsätze direkt anlegen.",
+    "C": "Falsch. Quotierung und Orderbuch sind getrennte Objekte; eine Quotierung erzeugt keine Orderbuchsätze.",
+    "D": "Falsch. Die automatische Erzeugung (ME05) ist nicht auf ein Werk beschränkt; Sie wählen Materialien und Werke selbst aus."
+   },
+   "offeneFrage": "Sie erzeugen Orderbuchsätze automatisch für eine ganze Warengruppe. Welche Fragen müssen Sie vorher klären, damit bestehende Einträge nicht ungewollt überschrieben werden?"
+  },
+  {
+   "nr": 36,
+   "key": "1beb2a4e",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Vergleich der Beschaffungsprozesse für Lager- und Verbrauchsmaterial",
+     "seiten": [
+      181
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Kennzeichen „Keine Bestandsführung“ gibt es in der Bestellanforderung nicht. Ob Verbrauch vorliegt, ergibt sich aus dem Kontierungstyp.",
+    "B": "Falsch. „Aktivitätstyp“ ist hier kein Begriff aus dem Einkauf.",
+    "C": "Richtig. Erst der Kontierungstyp K (Kostenstelle) legt fest, welche Kontierungsdaten (Sachkonto, Kostenstelle) einzugeben sind.",
+    "D": "Falsch. Einen Positionstyp „Verbrauchsmaterial“ gibt es nicht. Verbrauch wird über die Kontierung gesteuert."
+   },
+   "offeneFrage": "Welche Daten müssen Sie bei Kontierungstyp K eingeben, und was ist bei Kontierungstyp A (Anlage) anders?"
+  },
+  {
+   "nr": 37,
+   "key": "bea25b80",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      271
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Kontrakten",
+     "seiten": [
+      113
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Die bereits abgerufene Menge (bzw. der abgerufene Wert) wird angezeigt.",
+    "B": "Falsch. Der Ersteller eines Abrufs ist nicht Teil der Abrufdokumentation.",
+    "C": "Richtig. Pro Abruf wird der Bestellwert angezeigt.",
+    "D": "Richtig. Pro Abruf werden Bestellnummer und Position angezeigt.",
+    "E": "Falsch. Angezeigt wird das Bestelldatum, nicht das Lieferdatum."
+   },
+   "offeneFrage": "Wo wird bei einem Wertkontrakt fortgeschrieben, und wo bei einem Mengenkontrakt (Kopf oder Position)?"
+  },
+  {
+   "nr": 38,
+   "key": "573753bf",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bestellanforderung anlegen",
+     "seiten": [
+      184,
+      185
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Limitbestellungen anlegen",
+     "seiten": [
+      419
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. In Bestellanforderungen ist der Kontierungstyp U erlaubt.",
+    "B": "Richtig. In Bestellungen ist U ausnahmsweise bei Dienstleistungspositionen zulässig.",
+    "C": "Falsch. In normalen Bestellungen ist U nicht zulässig; dort braucht es ein echtes Kontierungsobjekt.",
+    "D": "Falsch. Konsignationsbestellungen erlauben U nicht.",
+    "E": "Richtig. Auch bei Limitpositionen ist U zulässig; die Kontierung wird dann erst bei der Rechnung angegeben."
+   },
+   "offeneFrage": "Welche Folge hat Kontierungstyp U für das Obligo im Controlling, und warum könnte das für das Budget problematisch sein?"
+  },
+  {
+   "nr": 39,
+   "key": "7cf9765a",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Geschäftspartner anlegen",
+     "seiten": [
+      24
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 4: Optimierte Einkaufsabwicklung",
+     "lektion": "Bestellüberwachung",
+     "seiten": [
+      308
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Infosatz übernimmt die Bestätigungspflicht als Vorschlag aus dem Lieferanten. Für alle Bestellungen eines Lieferanten ist er nicht die richtige Stelle.",
+    "B": "Richtig. „Auftragsbestätigungspflicht“ ist ein Steuerungskennzeichen in den Einkaufsdaten des Geschäftspartners und wird in Belege dieses Lieferanten vorgeschlagen.",
+    "C": "Falsch. Der Materialstamm ist lieferantenunabhängig; eine lieferantenbezogene Vorgabe gehört nicht dorthin.",
+    "D": "Falsch. Grunddaten sind allgemeine, lieferantenunabhängige Materialdaten."
+   },
+   "offeneFrage": "Welche weiteren Steuerungskennzeichen nennt das Buch in den Einkaufsdaten des Geschäftspartners, und welche Wirkung haben sie auf Infosätze und Bestellungen?"
+  },
+  {
+   "nr": 40,
+   "key": "261a78f2",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      129,
+      130
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Einkaufsinfosätzen",
+     "seiten": [
+      81,
+      82
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Aus Bestellungen werden Beleg- und Positionsnummer als letzter Beleg in den Infosatz geschrieben.",
+    "B": "Richtig. Gibt es noch keinen Infosatz, wird er über das Kennzeichen automatisch angelegt.",
+    "C": "Falsch. Konditionen werden über InfoUpdate in einer Bestellung nie angelegt oder fortgeschrieben.",
+    "D": "Falsch. Vorgeschlagen werden die Konditionen des Infosatzes. Nur wenn dort keine gepflegt sind, kommt der Preis der letzten Bestellung, und das steuert der Benutzerparameter EVO, nicht das Kennzeichen."
+   },
+   "offeneFrage": "Was bewirkt InfoUpdate bei einem Angebot und bei einem Kontrakt im Unterschied zur Bestellung?"
+  },
+  {
+   "nr": 41,
+   "key": "415297e3",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Limitbestellungen anlegen",
+     "seiten": [
+      418,
+      419,
+      420
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Eine Limitbestellung ist über einen längeren Zeitraum gültig; der Gültigkeitszeitraum wird im Kopf (FO) bzw. in der Position (E) gepflegt.",
+    "B": "Richtig. Zu Limitpositionen erfolgt kein Wareneingang und keine Leistungserfassung; abgerechnet wird direkt per Rechnung.",
+    "C": "Richtig (laut Lösung). In der klassischen Transaktion mit Belegart FO wird Positionstyp B verwendet. Das Buch nennt zusätzlich den Positionstyp E (Erweitertes Limit), der z. B. in der App „Bestellungen verwalten“ automatisch gezogen wird.",
+    "D": "Falsch. Das Gesamtlimit wird pro Position gepflegt, nicht als Maximalwert im Kopf."
+   },
+   "offeneFrage": "Warum senkt eine Limitbestellung die Prozesskosten? Nennen Sie die vier Gründe aus dem Buch.",
+   "hinweis": "Prüfungsfragen beziehen sich hier auf den klassischen Positionstyp B. Merken Sie sich trotzdem, dass das Buch auch E (Erweitertes Limit) nennt."
+  },
+  {
+   "nr": 42,
+   "key": "cf5a323f",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Die erweiterte Transaktion zum Anlegen von Bestellungen verwenden",
+     "seiten": [
+      295
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Beleg markieren und „Übernehmen“ wählen kopiert ihn in die Bestellung.",
+    "B": "Falsch. Ein einfacher Klick markiert den Beleg nur.",
+    "C": "Richtig. Sie können den Beleg per Drag-and-Drop in den Einkaufswagen ziehen.",
+    "D": "Falsch. Ein Doppelklick zeigt den Beleg nur an, er wird nicht kopiert."
+   },
+   "offeneFrage": "Wie fassen Sie zwei Bestellanforderungen für dasselbe Material, die sich nur im Lieferdatum unterscheiden, in einer Bestellposition mit zwei Einteilungen zusammen?"
+  },
+  {
+   "nr": 43,
+   "key": "b04e3149",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      48,
+      49
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Mit der Lohnbearbeitung arbeiten",
+     "seiten": [
+      429
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Standard ist in Bestellanforderung und Bestellung möglich.",
+    "B": "Richtig. Konsignation ist in beiden Belegen möglich.",
+    "C": "Richtig. Lohnbearbeitung ist in beiden möglich; das Material kann über eine Bestellanforderung angefordert und mit Positionstyp L bestellt werden.",
+    "D": "Falsch. Warengruppe (W) ist nur in Kontrakten zulässig.",
+    "E": "Falsch. Material unbekannt (M) ist nur in Kontrakten zulässig."
+   },
+   "offeneFrage": "Warum ergeben die Positionstypen M und W nur im Kontrakt Sinn und nicht in einer Bestellung?"
+  },
+  {
+   "nr": 44,
+   "key": "930ebef1",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Bestellanforderungen freigeben",
+     "seiten": [
+      351
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 5: Belegfreigabeverfahren",
+     "lektion": "Freigabeverfahren im Customizing konfigurieren",
+     "seiten": [
+      373,
+      374
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Die Freigabestrategie legt fest, welche Freigabecodes beteiligt sind und in welcher Reihenfolge sie freigeben dürfen (Freigabevoraussetzungen).",
+    "B": "Falsch. Bestellanforderungen können je nach Freigabegruppe und Belegart positionsweise oder insgesamt freigegeben werden; nur Bestellungen sind auf die Kopfebene beschränkt.",
+    "C": "Falsch. Die Strategie ermittelt das System selbst anhand der Merkmalswerte in der Klassifizierung (z. B. Wert, Kontierung, Werk). Der Ersteller wählt sie nicht aus.",
+    "D": "Richtig. Im Freigabekennzeichen ist hinterlegt, ob die Bestellanforderung schon in eine Anfrage und/oder in eine Bestellung umgesetzt werden darf."
+   },
+   "offeneFrage": "Wie könnte eine Strategie aussehen, bei der eine Bestellanforderung nach der ersten Freigabe bereits angefragt, aber erst nach der zweiten Freigabe bestellt werden darf?"
+  },
+  {
+   "nr": 45,
+   "key": "6a0efb09",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      34,
+      35
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Einkaufsinfosätzen",
+     "seiten": [
+      80
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Eine buchungskreisübergreifende Einkaufsorganisation ist keinem Buchungskreis zugeordnet und kann Werke aus mehreren Buchungskreisen betreuen.",
+    "B": "Falsch. Zwischen Einkaufsorganisation und Werk besteht eine n:m-Beziehung; ein Werk kann mehreren Einkaufsorganisationen zugeordnet sein.",
+    "C": "Falsch. Die Einkaufsdaten im Materialstamm liegen auf Mandanten- und Werksebene, nicht pro Einkaufsorganisation.",
+    "D": "Richtig. Die Einkaufsorganisation handelt die Konditionen aus; Einkaufskonditionen (z. B. im Infosatz) hängen deshalb immer an einer Einkaufsorganisation."
+   },
+   "offeneFrage": "Ihr Konzern will Rahmenverträge zentral verhandeln, die Werke sollen aber selbst bestellen. Wie würden Sie Einkaufsorganisationen und Werke zuordnen?"
+  },
+  {
+   "nr": 46,
+   "key": "d6554ab0",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      48
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Besondere Infosätze anlegen",
+     "seiten": [
+      96
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Konsignationsbestand wird pro Lieferant getrennt geführt, denn jeder Lieferant ist Eigentümer seiner Ware.",
+    "B": "Falsch. Bis zur Entnahme wird der Bestand nicht bewertet. Erst die Entnahme löst eine Verbindlichkeit mit dem Preis aus dem Konsignationsinfosatz aus.",
+    "C": "Richtig. Konsignationsbestand liegt bei Ihnen im Lager und wird mengenmäßig auf Lagerortebene geführt.",
+    "D": "Richtig. Bis zur Entnahme gehört das Material dem Lieferanten."
+   },
+   "offeneFrage": "Warum enthält eine Konsignationsbestellung keinen Preis, und woher kommt der Preis bei der Entnahme?"
+  },
+  {
+   "nr": 47,
+   "key": "68a32996",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellenfindung mit Quotierungen steuern",
+     "seiten": [
+      214
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ohne Quotenbasismenge bekäme eine neu aufgenommene Bezugsquelle (quotierte Menge 0) so lange alle Bedarfe, bis sie die anderen eingeholt hat.",
+    "B": "Falsch. Die Quotenbasismenge ist optional und dient nur der manuellen Steuerung.",
+    "C": "Richtig. In MEQ1 gibt es die Einzelrechnung (markierte Positionen) und die Sammelrechnung (alle Positionen).",
+    "D": "Falsch. Sie kann manuell erfasst oder vom System berechnet werden."
+   },
+   "offeneFrage": "Rechnen Sie nach: Lieferant A hat Quote 1 und quotierte Menge 600, der neue Lieferant B Quote 1 und quotierte Menge 0. Welche Quotenbasismenge braucht B, damit beide ab sofort gleich behandelt werden?"
+  },
+  {
+   "nr": 48,
+   "key": "2011a1db",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 4: Optimierte Einkaufsabwicklung",
+     "lektion": "Bestellüberwachung",
+     "seiten": [
+      308,
+      309
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Im Materialstamm gibt es keine Option „Mahnungen senden“. Er kann höchstens über den Einkaufswerteschlüssel die Bestätigungspflicht vorschlagen.",
+    "B": "Falsch. Auch im Lieferantenstamm wird nur die Bestätigungspflicht vorbelegt; einen Schalter für Mahnungen gibt es dort nicht.",
+    "C": "Richtig. In der Bestellung muss „Bestätigungspflicht“ markiert sein.",
+    "D": "Richtig. Der Beleg muss bereits ausgegeben worden sein, denn wer nichts bekommen hat, kann nicht gemahnt werden."
+   },
+   "offeneFrage": "Welche weiteren Voraussetzungen nennt das Buch, z. B. für Nachrichtenfindung und Nachrichtensätze? Und wie überwachen Sie Bestätigungen ohne Mahnungen (ME2A)?"
+  },
+  {
+   "nr": 49,
+   "key": "628fa7d5",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Einkaufsinfosätzen",
+     "seiten": [
+      80,
+      81
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Zuerst werden werksbezogene Konditionen gesucht, dann die der Einkaufsorganisation; erst ohne Konditionen kommt der Preis aus dem letzten Beleg.",
+    "B": "Falsch. Der letzte Beleg ist nur die Rückfallebene, wenn im Infosatz keine Konditionen gepflegt sind.",
+    "C": "Falsch. Die spezifischere Ebene (mit Werk) geht vor der allgemeinen.",
+    "D": "Falsch. Auch hier steht die allgemeine Ebene vor der spezifischeren; es ist genau umgekehrt."
+   },
+   "offeneFrage": "Was müssen Sie im Customizing einstellen, damit Konditionen überhaupt auf Werksebene im Infosatz gesichert werden können?"
+  },
+  {
+   "nr": 50,
+   "key": "967bc1d0",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      131
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Grundlagen der Preisfindung analysieren",
+     "seiten": [
+      68
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Bei Lieferplänen bestimmt die Belegart, ob Konditionen zeitabhängig oder zeitunabhängig sind.",
+    "B": "Richtig. Konditionen in Infosätzen sind immer zeitabhängig.",
+    "C": "Falsch. Konditionen in Bestellungen sind immer zeitunabhängig.",
+    "D": "Richtig. Konditionen in Kontrakten sind immer zeitabhängig."
+   },
+   "offeneFrage": "Was können Sie mit zeitabhängigen Konditionen machen, was mit zeitunabhängigen nicht geht? (Gültigkeit, Staffeln, Preisspannen)"
+  },
+  {
+   "nr": 51,
+   "key": "ef062cfd",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      48
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Besondere Infosätze anlegen",
+     "seiten": [
+      96
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Wareneingang in den Konsignationsbestand führt noch zu keiner Bewertung und keiner Verbindlichkeit.",
+    "B": "Falsch. Die Einplanung beim Lieferanten hat keine buchhalterische Wirkung.",
+    "C": "Falsch. Die Übermittlung der Bestellung erzeugt keine Verbindlichkeit.",
+    "D": "Richtig. Die Verbindlichkeit entsteht erst bei der Entnahme aus dem Konsignationsbestand."
+   },
+   "offeneFrage": "Welchen Vorteil hat Konsignation für Ihre Liquidität, und welchen Nachteil könnte sie für den Lieferanten haben?"
+  },
+  {
+   "nr": 52,
+   "key": "af7f93e7",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      35,
+      36
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Einkäufergruppen werden keiner Organisationseinheit zugeordnet.",
+    "B": "Falsch. Auch eine Zuordnung von Einkäufergruppe zu Werk gibt es nicht.",
+    "C": "Richtig. Die Zuordnung Einkaufsorganisation zu Werk ist immer notwendig, bei der werksbezogenen genau ein Werk.",
+    "D": "Richtig. Bei der werksbezogenen Einkaufsorganisation ordnen Sie die Einkaufsorganisation zusätzlich einem Buchungskreis zu."
+   },
+   "offeneFrage": "Was unterscheidet in den Zuordnungen eine werksbezogene von einer werksübergreifenden Einkaufsorganisation?"
+  },
+  {
+   "nr": 53,
+   "key": "27051c2c",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      270
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 8: Automatisierter Beschaffungsprozess",
+     "lektion": "Bestellungen automatisch erzeugen",
+     "seiten": [
+      367,
+      368
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ein Kontraktabruf ist eine normale Bestellung mit Bezug zum Kontrakt, z. B. in „Bestellung anlegen“ (ME21N).",
+    "B": "Falsch. Eine eigene Transaktion „Kontraktabruf anlegen“ gibt es nicht; Abrufe sind Bestellungen.",
+    "C": "Richtig. Hat die Bestellanforderung die Kontraktposition als Bezugsquelle, erzeugt die automatische Bestellerzeugung daraus einen Kontraktabruf.",
+    "D": "Falsch. In „Kontrakt ändern“ gibt es keine Folgefunktion, die einen Abruf erzeugt."
+   },
+   "offeneFrage": "Welche Voraussetzungen müssen im Material- und im Lieferantenstamm erfüllt sein, damit die automatische Bestellerzeugung funktioniert?"
+  },
+  {
+   "nr": 54,
+   "key": "b4ed8007",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      33,
+      34
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Lagerorte gehören zu einem Werk und stehen deshalb darunter.",
+    "B": "Richtig. Mandant (Konzern) → Buchungskreis (bilanzierende Firma) → Werk → Lagerort.",
+    "C": "Falsch. Der Buchungskreis liegt über dem Werk, denn jedes Werk gehört genau einem Buchungskreis.",
+    "D": "Falsch. Der Mandant ist die höchste Ebene im SAP-System."
+   },
+   "offeneFrage": "Warum reicht in Belegen die Angabe des Werks, um auch den Buchungskreis zu kennen?"
+  },
+  {
+   "nr": 55,
+   "key": "da740680",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Rechnungspläne verwenden",
+     "seiten": [
+      404,
+      405
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Rechnungsplan ist kein eigenständiger Belegtyp, sondern eine besondere Form der Bestellung.",
+    "B": "Falsch. Mit der App „Bestellungen verwalten“ können Rechnungspläne weder angelegt noch bearbeitet werden.",
+    "C": "Richtig. Rechnungspläne können nicht über eine Bestellanforderung angefordert werden.",
+    "D": "Richtig. Rechnungen können anhand der Termine in der Bestellposition automatisch erzeugt werden (z. B. MRIS)."
+   },
+   "offeneFrage": "Welche Voraussetzungen braucht die automatische Rechnungsplanabrechnung (Kennzeichen, Steuerkennzeichen, Zahlungsbedingungen)?"
+  },
+  {
+   "nr": 56,
+   "key": "5017971e",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Weitere Aspekte der Bezugsquellenfindung identifizieren",
+     "seiten": [
+      239
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Das Orderbuch ist eine der Stufen der automatischen Bezugsquellenfindung.",
+    "B": "Falsch. Das Kennzeichen InfoUpdate steuert nur, ob eine Bestellung den Infosatz fortschreibt. Für die Bezugsquellenfindung spielt es keine Rolle.",
+    "C": "Richtig. Eine gültige Quotierung wird zuerst geprüft; zugeordnet wird die Bezugsquelle mit der niedrigsten Quotenzahl.",
+    "D": "Falsch. Partnerrollen legen z. B. abweichende Rechnungssteller fest. Eine Bezugsquelle ermitteln sie nicht."
+   },
+   "offeneFrage": "Eine Bestellanforderung über 1.000 Stück wird manuell angelegt, und es gibt eine Quotierung 50:50. Wird die Menge aufgeteilt? Begründen Sie mit dem Buch."
+  },
+  {
+   "nr": 57,
+   "key": "f36921c9",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      127
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Einkaufsinfosätzen",
+     "seiten": [
+      78,
+      79
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Derzeitige und künftige Preise und Konditionen sind im Infosatz enthalten.",
+    "B": "Falsch. Infosätze werden auf Mandanten-, Einkaufsorganisations- und ggf. Werksebene gepflegt, nicht pro Buchungskreis.",
+    "C": "Richtig. Die Planlieferzeit des Lieferanten für das Material steht im Infosatz.",
+    "D": "Falsch. Lagerorte spielen im Infosatz keine Rolle.",
+    "E": "Richtig. Einkaufsdaten wie Unter- und Überlieferungstoleranzen sind enthalten."
+   },
+   "offeneFrage": "Welche Infosatzdaten liegen auf Mandantenebene und welche pro Einkaufsorganisation bzw. Werk?"
+  },
+  {
+   "nr": 58,
+   "key": "81420a65",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bewertete und unbewertete Wareneingänge erfassen",
+     "seiten": [
+      213
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Zusätzliche Sonderfunktionen einsetzen",
+     "seiten": [
+      449
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ist das Kennzeichen „Wareneingang“ gesetzt (und „WE unbewertet“ nicht), wird der Wareneingang zur kontierten Position bewertet gebucht.",
+    "B": "Falsch. Das Rechnungseingangskennzeichen steuert, ob eine Rechnung erwartet wird, nicht die Bewertung des Wareneingangs.",
+    "C": "Falsch. Ein Kennzeichen „Wareneingang bewertet“ gibt es nicht; es gibt nur das Gegenstück „WE unbewertet“.",
+    "D": "Falsch. Der Kontierungstyp bestimmt das Kontierungsobjekt. Ob der Wareneingang bewertet wird, hängt an den WE-Kennzeichen."
+   },
+   "offeneFrage": "Was passiert mit dem Obligo, wenn ein bewerteter Wareneingang zu einer kontierten Bestellposition gebucht wird?"
+  },
+  {
+   "nr": 59,
+   "key": "cee6d8eb",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      35,
+      36
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Lagerorte spielen für die Kategorie einer Einkaufsorganisation keine Rolle.",
+    "B": "Richtig. Eine werksbezogene Einkaufsorganisation ist für genau ein Werk zuständig.",
+    "C": "Falsch. Eine lagerortspezifische Einkaufsorganisation gibt es nicht.",
+    "D": "Richtig. Sie ist keinem Buchungskreis zugeordnet und kann Werke mehrerer Buchungskreise betreuen.",
+    "E": "Richtig (laut Lösung). Im Buch heißt diese Variante „werksübergreifende Einkaufsorganisation“: Sie ist einem Buchungskreis zugeordnet und für mehrere Werke dieses Buchungskreises zuständig."
+   },
+   "offeneFrage": "Ordnen Sie Ihrem eigenen Unternehmen eine der drei Kategorien zu. Welche Zuordnungen müssten dafür im Customizing bestehen?",
+   "hinweis": "Das Buch nennt die drei Kategorien werksbezogen, werksübergreifend und buchungskreisübergreifend. „Buchungskreisspezifisch“ entspricht der werksübergreifenden Variante innerhalb eines Buchungskreises."
+  },
+  {
+   "nr": 60,
+   "key": "44336021",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      131
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Grundlagen der Preisfindung analysieren",
+     "seiten": [
+      70
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Kopfkonditionen gelten für sämtliche Positionen des Belegs.",
+    "B": "Falsch. Zahlungsbedingungen regeln Zahlungsziele und Skonto, keinen einmaligen Rabatt.",
+    "C": "Falsch. Allgemeine Lieferantenkonditionen (z. B. MEKE) würden für alle künftigen Bestellungen gelten, nicht nur für diese eine.",
+    "D": "Falsch. Positionskonditionen gelten nur für die jeweilige Position; Sie müssten den Rabatt bei jeder Position einzeln erfassen."
+   },
+   "offeneFrage": "Wie wird ein absoluter Kopfrabatt (z. B. 100 EUR) auf mehrere Positionen verteilt, und welche Rolle spielt dabei die Gruppenkondition?"
+  },
+  {
+   "nr": 61,
+   "key": "5ee2616f",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellenfindung mit Quotierungen steuern",
+     "seiten": [
+      213,
+      214
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch (laut Lösung). Die Basismenge fließt zwar in die Quotenzahl ein, die Quote selbst (der Anteil) bleibt aber unverändert.",
+    "B": "Falsch. Die Aufteilung richtet sich weiterhin nach der Quote; die Basismenge gleicht nur einen Vorsprung bei der quotierten Menge aus.",
+    "C": "Falsch. Gesperrt wird über das Orderbuch oder den Lieferanten, nicht über die Quotenbasismenge.",
+    "D": "Richtig. Mit der Quotenbasismenge verhindern Sie, dass eine neue Bezugsquelle zunächst sämtliche Bedarfe erhält."
+   },
+   "offeneFrage": "Warum würde ohne Basismenge eine neue Bezugsquelle alle Bedarfe bekommen? Erklären Sie es mit der Formel.",
+   "hinweis": "Formel: Quotenzahl = (quotierte Menge + Quotenbasismenge) / Quote. Zugeordnet wird die niedrigste Quotenzahl."
+  },
+  {
+   "nr": 62,
+   "key": "26a0574c",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Materialstammdaten pflegen",
+     "seiten": [
+      118
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Der Bewertungskreis kann im Customizing auf Werksebene festgelegt werden.",
+    "B": "Falsch. Der Geschäftsbereich ist keine mögliche Bewertungsebene.",
+    "C": "Richtig. Alternativ kann der Bewertungskreis auf Buchungskreisebene liegen.",
+    "D": "Falsch. Lagerorte führen nur Mengen, keinen eigenen Wert."
+   },
+   "offeneFrage": "Welche Folgen hätte es, die Bewertungsebene nachträglich von Buchungskreis auf Werk umzustellen, und warum rät das Buch davon ab?"
+  },
+  {
+   "nr": 63,
+   "key": "5964f531",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bewertete und unbewertete Wareneingänge erfassen",
+     "seiten": [
+      213,
+      223
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Die Position wird bewertet, nur erst bei der Rechnung.",
+    "B": "Falsch. Ein Wareneingang ist weiterhin möglich, er wird nur ohne Wert gebucht.",
+    "C": "Falsch. Die Menge wird beim Wareneingang fortgeschrieben, nur ein Wert wird nicht gebucht.",
+    "D": "Richtig. Beim unbewerteten Wareneingang erfolgt keine Buchung auf Verbrauchs- oder WE/RE-Konto. Das Verbrauchskonto wird erst mit dem Rechnungsbetrag belastet."
+   },
+   "offeneFrage": "Welche Buchungen sehen Sie beim Wareneingang und bei der Rechnung, wenn das Kennzeichen „WE unbewertet“ gesetzt ist, und welche, wenn es nicht gesetzt ist?"
+  },
+  {
+   "nr": 64,
+   "key": "f5eba2ae",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Lieferpläne ohne Abrufdokumentation anlegen",
+     "seiten": [
+      145
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Lieferpläne mit Abrufdokumentation anlegen",
+     "seiten": [
+      153,
+      156
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Das Kennzeichen wird nicht im einzelnen Lieferplan gesetzt, sondern ist im Customizing an der Belegart hinterlegt.",
+    "B": "Richtig. Bei der Belegart LPA ist die Abrufdokumentation im Customizing voreingestellt.",
+    "C": "Falsch. LP ist die Belegart ohne Abrufdokumentation.",
+    "D": "Falsch. Weder im Lieferplan noch im Materialstamm gibt es ein solches Kennzeichen. Im Materialstamm gibt es nur das Feinabrufkennzeichen."
+   },
+   "offeneFrage": "Wann würden Sie bewusst LP statt LPA nehmen? Denken Sie an die Zahl der Einteilungen und die Nachvollziehbarkeit."
+  },
+  {
+   "nr": 65,
+   "key": "9be8987e",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Lieferpläne mit Abrufdokumentation anlegen",
+     "seiten": [
+      159,
+      160
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Beide Fixierungszeiträume werden in den Einteilungen gedruckt und mit übermittelt.",
+    "B": "Falsch. Umgekehrt: Einteilungen im ersten Fixierungszeitraum (Produktionsfreigabe) gelten als fixiert und damit als verbindliche Bestellung.",
+    "C": "Falsch. Der erste Fixierungszeitraum hat den höheren Verbindlichkeitsgrad.",
+    "D": "Richtig. Der zweite Fixierungszeitraum (Materialfreigabe) kann einen geringeren Verbindlichkeitsgrad haben als der erste."
+   },
+   "offeneFrage": "Welche Zeitspanne bildet der Produktionsfreigabezeitraum beim Lieferanten typischerweise ab, und welche der Materialfreigabezeitraum?"
+  },
+  {
+   "nr": 66,
+   "key": "ceb91c8e",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Planungslauf mit Quotierungen ausführen",
+     "seiten": [
+      225,
+      226,
+      227
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Die minimale Losgröße ist eine Untergrenze pro Beschaffungsvorschlag, keine Monatsgrenze.",
+    "B": "Richtig. Eine Obergrenze pro Zeitraum wird über die maximale Abrufmenge pro Periode (z. B. pro Monat) festgelegt.",
+    "C": "Falsch. Eine „Mindestmenge für die Splittung“ begrenzt keine Liefermenge pro Monat.",
+    "D": "Falsch. Die maximale Losgröße begrenzt nur die Menge pro einzelnem Beschaffungsvorschlag im Planungslauf, nicht die Gesamtmenge pro Monat."
+   },
+   "offeneFrage": "Worin unterscheiden sich maximale Losgröße, maximale Menge und maximale Abrufmenge? Ordnen Sie jedem ein eigenes Beispiel zu."
+  },
+  {
+   "nr": 67,
+   "key": "bcce95d9",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Geschäftspartner anlegen",
+     "seiten": [
+      24
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Partnerfunktionen im Einkauf verwenden",
+     "seiten": [
+      41,
+      42
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Partnerrollen werden direkt im Geschäftspartner (Transaktion BP) bei den Einkaufsdaten gepflegt; eine Spezialtransaktion braucht es nicht.",
+    "B": "Falsch. Sie können mehrere Partnerrollen pflegen (Bestelladresse, Warenlieferant, Rechnungssteller, Zahlungsempfänger), und je nach Customizing sogar mehrere Partner pro Rolle.",
+    "C": "Richtig. Ist ein abweichender Rechnungssteller hinterlegt, wird er beim Buchen der Rechnung automatisch ermittelt.",
+    "D": "Richtig. Jeder Partner, der eine Rolle übernimmt, braucht einen eigenen Geschäftspartnerstammsatz, so auch der Warenlieferant."
+   },
+   "offeneFrage": "Spielen Sie das ABC-Beispiel aus dem Buch durch: Welche drei Stammsätze brauchen Sie, und in welchem davon pflegen Sie die Partnerrollen?"
+  },
+  {
+   "nr": 68,
+   "key": "b9e4eccb",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      130
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Grundlagen der Preisfindung analysieren",
+     "seiten": [
+      69
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Bezugsnebenkosten und Skonto gehören zum Effektivpreis, nicht zum Nettopreis.",
+    "B": "Falsch. Skonto wird beim Effektivpreis abgezogen, nicht beim Nettopreis addiert.",
+    "C": "Richtig. Nettopreis = Bruttopreis plus/minus Zu- und Abschläge, ohne Bezugsnebenkosten und ohne Skonto.",
+    "D": "Falsch. Bezugsnebenkosten sind nicht Teil des Nettopreises."
+   },
+   "offeneFrage": "Rechnen Sie: Bruttopreis 100 EUR, 5 % Rabatt, 2 EUR Mindermengenzuschlag, 3 EUR Fracht, 2 % Skonto. Wie hoch sind Netto- und Effektivpreis?"
+  },
+  {
+   "nr": 69,
+   "key": "f8261412",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      33,
+      34
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Der Mandant ist eine rechtlich und organisatorisch abgeschlossene Einheit mit eigenen Stammsätzen und Tabellen.",
+    "B": "Falsch. In einem Mandanten können mehrere Buchungskreise angelegt werden.",
+    "C": "Richtig. Der Buchungskreis ist die kleinste Einheit des externen Rechnungswesens mit einer vollständigen, in sich abgeschlossenen Buchhaltung.",
+    "D": "Falsch. Benutzer werden pro Mandant angelegt, nicht einem Buchungskreis zugeordnet."
+   },
+   "offeneFrage": "Ein Konzern hat drei rechtlich selbstständige Firmen. Wie viele Mandanten und wie viele Buchungskreise würden Sie einrichten, und warum?"
+  },
+  {
+   "nr": 70,
+   "key": "7e3a0895",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Rechnung erfassen",
+     "seiten": [
+      69,
+      70
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Die Buchhaltungsbelegnummer des Wareneingangs ist kein Zuordnungskriterium.",
+    "B": "Richtig. Die Bestellnummer ist der Standardbezug.",
+    "C": "Falsch. Die Materialbelegnummer wird nicht als Zuordnungskriterium angeboten.",
+    "D": "Richtig. Die Lieferscheinnummer geht, sofern sie beim Wareneingang erfasst wurde.",
+    "E": "Richtig. Auch die Frachtbriefnummer geht, sofern sie beim Wareneingang erfasst wurde."
+   },
+   "offeneFrage": "Warum lohnt es sich, schon beim Wareneingang die Lieferscheinnummer sauber zu erfassen? Wer profitiert davon später im Prozess?"
+  },
+  {
+   "nr": 71,
+   "key": "5b6526e7",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Vergleich der Beschaffungsprozesse für Lager- und Verbrauchsmaterial",
+     "seiten": [
+      181
+     ]
+    },
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Bestellanforderung anlegen",
+     "seiten": [
+      184
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Für Lagermaterial darf gerade kein Kontierungstyp eingegeben werden.",
+    "B": "Richtig. In Bestellanforderungen mit Positionstyp Standard ist U (Unbekannt) zulässig.",
+    "C": "Richtig. Der Kontierungstyp legt fest, welches Kontierungsobjekt (z. B. Kostenstelle, Anlage) und welche Daten erforderlich sind.",
+    "D": "Falsch. Kontierungstypen sind Customizing-Einstellungen und können angepasst oder ergänzt werden."
+   },
+   "offeneFrage": "Warum ist U in der Bestellanforderung erlaubt, in der normalen Bestellung aber nicht?"
+  },
+  {
+   "nr": 72,
+   "key": "e1e9019e",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      270
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 4: Optimierte Einkaufsabwicklung",
+     "lektion": "Nicht zugeordnete Bestellanforderungen bearbeiten",
+     "seiten": [
+      281,
+      282
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ist eine Kontraktposition die Bezugsquelle, entsteht bei der Umsetzung eine Bestellung mit Kontraktbezug, also ein Kontraktabruf.",
+    "B": "Richtig. Die zugeordneten Positionen können direkt in Bestellungen umgesetzt werden.",
+    "C": "Falsch. Umgesetzt wird in Anfragen. Angebote erfasst man erst, wenn der Lieferant auf die Anfrage antwortet.",
+    "D": "Falsch. Quotierungen sind Stammdaten der Bezugsquellenfindung und keine Folgebelege.",
+    "E": "Richtig. Ist ein Lieferplan zugeordnet, werden Lieferplaneinteilungen erzeugt."
+   },
+   "offeneFrage": "Was passiert mit einer Vormerkung für die Anfrage, wenn Sie die Transaktion verlassen, ohne die Anfrage anzulegen?"
+  },
+  {
+   "nr": 73,
+   "key": "74ba13d1",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Die erweiterte Transaktion zum Anlegen von Bestellungen verwenden",
+     "seiten": [
+      295
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Ein Doppelklick zeigt den Beleg nur an, er wird nicht kopiert.",
+    "B": "Richtig. Sie können den Beleg per Drag-and-Drop in den Einkaufswagen ziehen.",
+    "C": "Richtig. Beleg markieren und „Übernehmen“ wählen kopiert ihn in die Bestellung.",
+    "D": "Falsch. Ein einfacher Klick markiert den Beleg nur."
+   },
+   "offeneFrage": "Welche Daten werden beim Anlegen mit Bezug aus dem Vorlagebeleg übernommen, und wo sehen Sie später, aus welchem Beleg eine Position stammt?"
+  },
+  {
+   "nr": 74,
+   "key": "66529b89",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Vergleich der Beschaffungsprozesse für Lager- und Verbrauchsmaterial",
+     "seiten": [
+      182
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Zusätzliche Sonderfunktionen einsetzen",
+     "seiten": [
+      448,
+      449
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Beim Wareneingang lässt sich die Verteilung per BAdI anpassen, und auch in der Rechnungsprüfung gibt es Verteilungslogiken. Ein generelles Änderungsverbot nennt das Buch nicht.",
+    "B": "Richtig. Sie legen fest, ob Teilrechnungsbeträge proportional oder auffüllend auf die Kontierungen verteilt werden.",
+    "C": "Falsch. Auch bewertete Wareneingänge sind möglich; bei Lohnbearbeitung mit Mehrfachkontierung ist ein bewerteter Wareneingang sogar Pflicht.",
+    "D": "Richtig. Die Verteilung kann mengenmäßig, prozentual oder wertmäßig erfolgen."
+   },
+   "offeneFrage": "Eine Bestellung über 1.000 EUR ist 60:40 auf zwei Kostenstellen verteilt, die erste Teilrechnung lautet über 300 EUR. Wie wird sie proportional und wie auffüllend verteilt?"
+  },
+  {
+   "nr": 75,
+   "key": "37d9e478",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      271
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Kontrakten",
+     "seiten": [
+      113
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Ersteller eines Abrufs ist nicht Teil der Abrufdokumentation.",
+    "B": "Richtig. Pro Abruf werden Bestellnummer und Position angezeigt.",
+    "C": "Richtig. Pro Abruf wird der Bestellwert angezeigt.",
+    "D": "Falsch. Angezeigt wird das Bestelldatum, nicht das Lieferdatum.",
+    "E": "Richtig. Die bereits abgerufene Menge (bzw. der abgerufene Wert) wird angezeigt."
+   },
+   "offeneFrage": "Ein Lieferant liefert bei einem Kontraktabruf 10 % mehr als bestellt. Taucht das in der Abrufdokumentation auf? (Tipp: Customizing OMXX)"
+  },
+  {
+   "nr": 76,
+   "key": "b7d60dbf",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      131
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Grundlagen der Preisfindung analysieren",
+     "seiten": [
+      70
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Zahlungsbedingungen regeln Zahlungsziele und Skonto, keinen einmaligen Rabatt.",
+    "B": "Falsch. Allgemeine Lieferantenkonditionen würden für alle künftigen Bestellungen gelten, nicht nur für diese eine.",
+    "C": "Falsch. Positionskonditionen gelten nur für die jeweilige Position.",
+    "D": "Richtig. Kopfkonditionen gelten für sämtliche Positionen des Belegs."
+   },
+   "offeneFrage": "Wann würden Sie statt einer Kopfkondition doch allgemeine Lieferantenkonditionen pflegen?"
+  },
+  {
+   "nr": 77,
+   "key": "4918f6e0",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Geschäftspartner anlegen",
+     "seiten": [
+      24
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 4: Optimierte Einkaufsabwicklung",
+     "lektion": "Bestellüberwachung",
+     "seiten": [
+      308
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Materialstamm ist lieferantenunabhängig; eine lieferantenbezogene Vorgabe gehört nicht dorthin.",
+    "B": "Richtig. „Auftragsbestätigungspflicht“ ist ein Steuerungskennzeichen in den Einkaufsdaten des Geschäftspartners und wird in Belege dieses Lieferanten vorgeschlagen.",
+    "C": "Falsch. Grunddaten sind allgemeine, lieferantenunabhängige Materialdaten.",
+    "D": "Falsch. Der Infosatz bekommt das Kennzeichen als Vorschlag aus dem Lieferanten; für alle Bestellungen eines Lieferanten ist der Geschäftspartner die richtige Stelle."
+   },
+   "offeneFrage": "Sie wollen die Bestätigungspflicht nur für ein bestimmtes Material dieses Lieferanten. Wo würden Sie sie dann pflegen?"
+  },
+  {
+   "nr": 78,
+   "key": "e50a6eb2",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Rechnungspläne verwenden",
+     "seiten": [
+      404,
+      405,
+      406
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Teilrechnungspläne teilen den Gesamtwert auf Termine auf (prozentual oder wertmäßig).",
+    "B": "Richtig. Periodische Rechnungspläne gibt es für wiederkehrende Zahlungen wie Mieten.",
+    "C": "Falsch. „Vollständige Rechnungspläne“ gibt es nicht.",
+    "D": "Falsch. „Finanzrechnungspläne“ gibt es nicht."
+   },
+   "offeneFrage": "Wie markieren Sie im Teilrechnungsplan einen Termin als Anzahlung, und was bedeutet das für die automatische Abrechnung?"
+  },
+  {
+   "nr": 79,
+   "key": "a41e7af3",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      51,
+      52
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Partnerfunktionen im Einkauf verwenden",
+     "seiten": [
+      56
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 4: Optimierte Einkaufsabwicklung",
+     "lektion": "Bestellüberwachung",
+     "seiten": [
+      319
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Druck ist ein Ausgabekanal.",
+    "B": "Richtig. EDI ist ein gängiger elektronischer Ausgabekanal.",
+    "C": "Falsch. Nachrichten werden über die Nachrichtenwarteschlange ausgegeben, sofort beim Sichern oder später per Job bzw. App. Das ist nicht an ME21N gebunden.",
+    "D": "Richtig. E-Mail ist ein Ausgabekanal (im Buch über die Ausgabeparameterfindung mit Kanal EMAIL eingerichtet).",
+    "E": "Falsch. Das SAP Business Workplace ist kein alleiniger Ausgabeweg."
+   },
+   "offeneFrage": "Wann würden Sie eine Nachricht sofort ausgeben und wann über einen Hintergrundjob?",
+   "hinweis": "Das Buch zeigt Druck und E-Mail in Übungen. EDI ist allgemeines SAP-Wissen und wird im Buch nicht ausführlich behandelt."
+  },
+  {
+   "nr": 80,
+   "key": "1c9f42d3",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 2: Prozesse und Unternehmensstruktur in der Beschaffung",
+     "lektion": "Identifizierung der Organisationseinheiten in der Beschaffung",
+     "seiten": [
+      34
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Einem Buchungskreis können mehrere Werke zugeordnet werden.",
+    "B": "Falsch. Lagerorte werden immer innerhalb eines Werks angelegt; ohne Werk gibt es keinen Lagerort.",
+    "C": "Richtig. Der Lagerortschlüssel muss nur innerhalb eines Werks eindeutig sein, weil zum Lagerort immer das Werk angegeben wird.",
+    "D": "Falsch. Ein Werk gehört genau einem Buchungskreis.",
+    "E": "Richtig. Einem Werk können mehrere Lagerorte zugeordnet werden."
+   },
+   "offeneFrage": "Warum darf derselbe Lagerortschlüssel (z. B. 0001) in verschiedenen Werken vorkommen, ein Werksschlüssel aber nur einmal im Mandanten?"
+  },
+  {
+   "nr": 81,
+   "key": "ebaf0607",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 1: Navigation in SAP S/4HANA",
+     "lektion": "Identifizieren der SAP-Fiori-Benutzererfahrung",
+     "seiten": [
+      6,
+      7
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Sprache und Region sind einstellbar, Adresse und Telefonnummer aber nicht; sie gehören zum Benutzerstamm.",
+    "B": "Falsch (laut Lösung). Favoriten gehören zur Personalisierung im SAP GUI (Easy Access) und stehen nicht in der Liste der Launchpad-Einstellungen.",
+    "C": "Richtig. Benutzer können im Launchpad Standardwerte pflegen, z. B. für Werk oder Einkaufsorganisation.",
+    "D": "Richtig. Das Design-Theme ist frei wählbar."
+   },
+   "offeneFrage": "Welche Standardwerte würden Sie sich in Ihrem Launchpad hinterlegen, damit Sie in den Einkaufs-Apps weniger tippen müssen?"
+  },
+  {
+   "nr": 82,
+   "key": "d80ebb16",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 4: Stammdaten der Beschaffung",
+     "lektion": "Einkaufsinfosatz pflegen",
+     "seiten": [
+      128
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Besondere Infosätze anlegen",
+     "seiten": [
+      95,
+      96
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Lohnbearbeitung ist ein Infotyp.",
+    "B": "Richtig. Konsignation ist ein Infotyp; der Preis daraus wird bei Entnahme verwendet.",
+    "C": "Falsch. Limit ist ein Positionstyp in Bestellungen, kein Infotyp.",
+    "D": "Falsch. Strecke ist ein Positionstyp, kein Infotyp."
+   },
+   "offeneFrage": "Welcher vierte Infotyp neben Normal, Lohnbearbeitung und Konsignation steht im Buch, und warum gibt es ihn nur mit Material?"
+  },
+  {
+   "nr": 83,
+   "key": "b077ca1e",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 3: Einfacher Beschaffungsprozess",
+     "lektion": "Eine Bestellung anlegen",
+     "seiten": [
+      49
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Positionstyp Warengruppe (W) ist nur in Kontrakten zulässig.",
+    "B": "Falsch. „Material unbekannt“ (M) ist ebenfalls nur in Kontrakten zulässig.",
+    "C": "Richtig. Normal bzw. Standard ist möglich.",
+    "D": "Richtig. Strecke (S) ist möglich, ebenso Konsignation (K), Lohnbearbeitung (L) und Erweitertes Limit (E)."
+   },
+   "offeneFrage": "Welche Positionstypen bietet „Bestellungen verwalten“ an, die Sie in ME21N auch haben, und welcher klassische Typ fehlt? (Tipp: Limit B gegen E)"
+  },
+  {
+   "nr": 84,
+   "key": "e56fe3dd",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 7: Erweiterte Transaktionen in der Beschaffung",
+     "lektion": "Einen Einkaufskontrakt pflegen",
+     "seiten": [
+      270
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 2: Bezugsquellen und Konditionen",
+     "lektion": "Arbeiten mit Kontrakten",
+     "seiten": [
+      114
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Der Mengenkontrakt (MK) ist erfüllt, wenn die Zielmenge pro Position erreicht ist.",
+    "B": "Richtig. Der Wertkontrakt (WK) ist erfüllt, wenn der Zielwert im Kopf erreicht ist.",
+    "C": "Falsch. Einen „Lieferkontrakt“ gibt es nicht. Gemeint ist wohl der Lieferplan, und der ist eine eigene Art Rahmenvertrag.",
+    "D": "Falsch. „Werkskontrakt“ ist keine Kontraktart. Werks- und Zentralkontrakt unterscheiden sich nur darin, ob in der Position ein Werk steht."
+   },
+   "offeneFrage": "Sie kennen nur das Jahresbudget für Büromaterial, aber nicht die einzelnen Mengen. Welche Kontraktart wählen Sie, und was müssen Sie im Kopf eingeben?"
+  },
+  {
+   "nr": 85,
+   "key": "ca312386",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Geschäftspartner anlegen",
+     "seiten": [
+      26,
+      27
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Ein CpD- bzw. Einmallieferant ist ein Sammelstammsatz, den Sie für viele verschiedene Lieferanten verwenden.",
+    "B": "Falsch. Die Anzahl der Lieferungen ist egal. Ein CpD-Lieferant lohnt sich, wenn Sie nur selten oder einmalig bei einem Lieferanten kaufen.",
+    "C": "Falsch. Der CpD-Stammsatz trägt den ganzen Prozess bis zur Rechnung; die individuellen Adressdaten werden im Beleg erfasst.",
+    "D": "Richtig. Weil er für viele Lieferanten gilt, enthält er keine lieferantenspezifische Adresse; diese wird im Einkaufsbeleg manuell eingegeben."
+   },
+   "offeneFrage": "Ab wann würden Sie aus einem CpD-Lieferanten einen „richtigen“ Geschäftspartner machen? Nennen Sie zwei Kriterien."
+  },
+  {
+   "nr": 86,
+   "key": "960f1a5b",
+   "fundstellen": [
+    {
+     "buch": "S4500",
+     "kapitel": "Kapitel 5: Lagermaterial im Vergleich zu Verbrauchsmaterial",
+     "lektion": "Vergleich der Beschaffungsprozesse für Lager- und Verbrauchsmaterial",
+     "seiten": [
+      182
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 6: Besondere Beschaffungsprozesse",
+     "lektion": "Zusätzliche Sonderfunktionen einsetzen",
+     "seiten": [
+      448
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Prozentuale Verteilung ist möglich.",
+    "B": "Falsch. „Nach Basismengeneinheit“ ist keine Verteilungsmethode. Es gibt eine mengenmäßige Verteilung nach Bestellmenge.",
+    "C": "Falsch. „In der definierten Reihenfolge“ (auffüllend) betrifft die Verteilung von Teilrechnungen, nicht die Aufteilung der Beträge.",
+    "D": "Richtig. Wertmäßige Verteilung ist möglich und hilft gegen Rundungsprobleme bei kleinen Beträgen."
+   },
+   "offeneFrage": "Wann ist die wertmäßige Verteilung der prozentualen vorzuziehen? Nennen Sie ein konkretes Beispiel mit Rundung."
+  },
+  {
+   "nr": 87,
+   "key": "82fbe859",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Partnerfunktionen im Einkauf verwenden",
+     "seiten": [
+      41
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Falsch. Der Stammsatz ist nicht von der Belegart abhängig. Er ist immer nötig.",
+    "B": "Richtig. Jeder abweichende Partner muss selbst als Geschäftspartner angelegt sein.",
+    "C": "Falsch. Auch der Positionstyp ändert nichts an dieser Voraussetzung."
+   },
+   "offeneFrage": "Welche Customizing-Einstellungen (Partnerschema, Kontengruppe) müssen außerdem stimmen, damit eine abweichende Bestelladresse in der Bestellung erscheint?"
+  },
+  {
+   "nr": 88,
+   "key": "b8589948",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 1: Stammdaten der Einkaufsabwicklung",
+     "lektion": "Materialstammsätze für den Einkauf anlegen",
+     "seiten": [
+      2,
+      4,
+      6
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Die Daten sind in Sichten nach Fachbereichen gegliedert; jeder Fachbereich sieht nur die für ihn relevanten Daten.",
+    "B": "Falsch. Sichten können später ergänzt werden (Material erweitern, z. B. über „Erweiterbare Materialien“).",
+    "C": "Richtig. Über den Pflegestatus (z. B. E für Einkauf, B für Buchhaltung) erkennt das System, welche Fachbereiche gepflegt sind.",
+    "D": "Falsch. Die Materialart steuert, welche Fachbereiche und Datenbilder gepflegt werden können."
+   },
+   "offeneFrage": "Ein Material soll bestellt werden, die Bestellung wird aber abgelehnt. Welche Pflegestatus würden Sie prüfen, und wann reicht „E“ allein nicht aus?"
+  },
+  {
+   "nr": 89,
+   "key": "3f3dedd7",
+   "fundstellen": [
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellenfindung mit Orderbüchern steuern",
+     "seiten": [
+      185,
+      186
+     ]
+    },
+    {
+     "buch": "S4520",
+     "kapitel": "Kapitel 3: Bezugsquellenfindung",
+     "lektion": "Bezugsquellen sperren",
+     "seiten": [
+      250
+     ]
+    }
+   ],
+   "antworten": {
+    "A": "Richtig. Mit dem Kennzeichen „Fix“ wird ein Orderbuchsatz als feste Bezugsquelle markiert.",
+    "B": "Falsch. Das Orderbuch wird pro Material und Werk gepflegt, nicht pro Lieferant und Einkaufsorganisation.",
+    "C": "Richtig. Über das Sperrkennzeichen oder die Orderbuchpflicht schränken Sie die zulässigen Bezugsquellen ein.",
+    "D": "Richtig. Das Orderbuch ist eine Liste der Bezugsquellen für ein Material in einem Werk.",
+    "E": "Falsch. Das Orderbuch sperrt nur die Kombination Material/Lieferant. Für alle Materialien gesperrt wird ein Lieferant über die Einkaufssperre im Geschäftspartner."
+   },
+   "offeneFrage": "Sie haben im Orderbuch sowohl einen Infosatz als auch eine Kontraktposition als fix markiert. Welche Bezugsquelle schlägt das System vor, und warum?"
+  }
+ ]
+}
