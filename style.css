@@ -221,3 +221,60 @@ select { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid
 /* Auswahl des Fragensets auf der Startseite */
 .set-wahl .tabs { margin-bottom: 0; }
 .set-wahl .tabs button { flex: 1 1 auto; }
+
+/* Navigation (Reiter) in der Kopfzeile */
+.topnav { display: flex; gap: 4px; margin-right: auto; }
+.topnav a {
+  padding: 6px 12px; border-radius: 99px; text-decoration: none;
+  color: var(--muted); font-weight: 600; font-size: .92rem;
+}
+.topnav a:hover { color: var(--text); }
+.topnav a[aria-current="page"] { background: var(--primary-soft); color: var(--primary); }
+body.im-test .topnav { visibility: hidden; }
+@media (max-width: 420px) {
+  .brand span { display: none; }
+  .topnav a { padding: 6px 10px; }
+}
+
+/* Erklärungen */
+details.erkl { margin-top: 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+details.erkl > summary {
+  cursor: pointer; padding: 12px 14px; font-weight: 700; color: var(--primary);
+  list-style: none; display: flex; align-items: center; gap: 8px;
+}
+details.erkl > summary::-webkit-details-marker { display: none; }
+details.erkl > summary::before { content: "▸"; transition: transform .15s; }
+details.erkl[open] > summary::before { transform: rotate(90deg); }
+details.erkl > .erkl-block, details.erkl > .erkl-hinweis, details.erkl > .erkl-frage { margin: 0 14px 14px; }
+div.erkl { margin-top: 12px; }
+.erkl h3 { font-size: .95rem; margin: 0 0 6px; }
+.erkl-block { margin-bottom: 14px; }
+.erkl ul.fund { margin: 0; padding-left: 18px; }
+.erkl ul.fund li { margin-bottom: 4px; }
+.erkl ul.begr { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.erkl ul.begr li { display: flex; gap: 10px; align-items: flex-start; }
+.erkl ul.begr .mark {
+  flex: 0 0 auto; width: 24px; height: 24px; display: grid; place-items: center;
+  border-radius: 6px; font-size: .8rem; font-weight: 700; color: #fff;
+}
+.erkl ul.begr li.r .mark { background: var(--ok); }
+.erkl ul.begr li.f .mark { background: var(--muted); }
+.erkl ul.begr .urteil { font-weight: 700; font-size: .85rem; }
+.erkl ul.begr li.r .urteil { color: var(--ok); }
+.erkl ul.begr li.f .urteil { color: var(--bad); }
+.erkl ul.begr .atext { color: var(--muted); font-size: .88rem; }
+.erkl ul.begr p { margin: 2px 0 0; }
+.erkl-hinweis { padding: 10px 12px; border-radius: 10px; background: var(--warn-soft); color: var(--text); font-size: .92rem; margin-bottom: 14px; }
+.erkl-frage { padding: 10px 12px; border-radius: 10px; background: var(--primary-soft); }
+.erkl-frage p { margin: 0; }
+
+.suche { width: 100%; font: inherit; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--text); min-height: 44px; }
+.buecher { margin: 0 0 8px; padding-left: 18px; }
+details.erkl-eintrag { padding: 0; }
+details.erkl-eintrag > summary { cursor: pointer; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; list-style: none; }
+details.erkl-eintrag > summary::-webkit-details-marker { display: none; }
+details.erkl-eintrag > summary .nr { font-weight: 700; color: var(--primary); white-space: nowrap; }
+details.erkl-eintrag > summary .ftext { flex: 1 1 100%; font-weight: 600; white-space: pre-line; }
+details.erkl-eintrag[open] > summary { border-bottom: 1px solid var(--border); }
+details.erkl-eintrag > .erkl-quelle, details.erkl-eintrag > .erkl, details.erkl-eintrag > p { margin: 12px 18px 18px; }
+details.erkl-eintrag { scroll-margin-top: 70px; }
